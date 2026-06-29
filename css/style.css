@@ -65,6 +65,11 @@ body {
   color: #d97706;
 }
 
+.eds-icon {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  color: #059669;
+}
+
 /* Focus Visible Outline for Accessibility */
 a:focus-visible {
   outline: 3px solid #2D7A44 !important;
