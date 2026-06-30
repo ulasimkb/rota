@@ -1,0 +1,4202 @@
+[
+  {
+    "name": "100. Yıl Mahallesi 1. Durak",
+    "lat": 39.38686412682107,
+    "lng": 30.04007227677612
+  },
+  {
+    "name": "100. Yıl Mahallesi 10. Durak",
+    "lat": 39.39211353669661,
+    "lng": 30.03285332803077
+  },
+  {
+    "name": "100. Yıl Mahallesi 11. Durak",
+    "lat": 39.39094948148635,
+    "lng": 30.03488215664373
+  },
+  {
+    "name": "100. Yıl Mahallesi 12. Durak",
+    "lat": 39.39276420093463,
+    "lng": 30.03064893042897
+  },
+  {
+    "name": "100. Yıl Mahallesi 13. Durak",
+    "lat": 39.39148486813318,
+    "lng": 30.03284223306381
+  },
+  {
+    "name": "100. Yıl Mahallesi 14. Durak",
+    "lat": 39.38925530001222,
+    "lng": 30.03384545417475
+  },
+  {
+    "name": "100. Yıl Mahallesi 15. Durak",
+    "lat": 39.38956479905047,
+    "lng": 30.03616026457442
+  },
+  {
+    "name": "100. Yıl Mahallesi 16. Durak",
+    "lat": 39.3868053814119,
+    "lng": 30.04000904962438
+  },
+  {
+    "name": "100. Yıl Mahallesi 17. Durak",
+    "lat": 39.38062224151105,
+    "lng": 30.04296052168832
+  },
+  {
+    "name": "100. Yıl Mahallesi 18. Durak",
+    "lat": 39.38068099731358,
+    "lng": 30.04318119991554
+  },
+  {
+    "name": "100. Yıl Mahallesi 2. Durak",
+    "lat": 39.38952989671724,
+    "lng": 30.03594687774889
+  },
+  {
+    "name": "100. Yıl Mahallesi 3. Durak",
+    "lat": 39.38949480108094,
+    "lng": 30.03378317598905
+  },
+  {
+    "name": "100. Yıl Mahallesi 4. Durak",
+    "lat": 39.39161032413378,
+    "lng": 30.03284550615691
+  },
+  {
+    "name": "100. Yıl Mahallesi 5. Durak",
+    "lat": 39.39280334514864,
+    "lng": 30.03071698020956
+  },
+  {
+    "name": "100. Yıl Mahallesi 6. Durak",
+    "lat": 39.39132371634403,
+    "lng": 30.03467236870145
+  },
+  {
+    "name": "100. Yıl Mahallesi 7. Durak",
+    "lat": 39.39219642400042,
+    "lng": 30.03315513897217
+  },
+  {
+    "name": "100. Yıl Mahallesi 8. Durak",
+    "lat": 39.39390340192538,
+    "lng": 30.03024924681553
+  },
+  {
+    "name": "100. Yıl Mahallesi 9. Durak",
+    "lat": 39.39345709153924,
+    "lng": 30.03051901879716
+  },
+  {
+    "name": "30 Ağustos İşmerkezi Durağı",
+    "lat": 39.41752017093884,
+    "lng": 29.97795184477466
+  },
+  {
+    "name": "30 Ağustos Mah. 1. Durak",
+    "lat": 39.4099287861581,
+    "lng": 30.00412579809952
+  },
+  {
+    "name": "30 Ağustos Mah. 2. Durak",
+    "lat": 39.41088604115404,
+    "lng": 29.99909577277179
+  },
+  {
+    "name": "30 Ağustos Mah. 3. Durak",
+    "lat": 39.40997343077559,
+    "lng": 29.99879344537694
+  },
+  {
+    "name": "30 Ağustos Mah. 4. Durak",
+    "lat": 39.4107864510563,
+    "lng": 29.99770430933325
+  },
+  {
+    "name": "30 Ağustos Mah. 5. Durak",
+    "lat": 39.41235916853707,
+    "lng": 29.99371363944392
+  },
+  {
+    "name": "30 Ağustos Mah. 6. Durak",
+    "lat": 39.41191176802882,
+    "lng": 29.99281058983941
+  },
+  {
+    "name": "30 Ağustos Mah. 7. Durak",
+    "lat": 39.41346963772093,
+    "lng": 29.99060437833489
+  },
+  {
+    "name": "30 Ağustos Organize S. Durağı",
+    "lat": 39.47109829689588,
+    "lng": 30.0177874854941
+  },
+  {
+    "name": "657 Konutlari 1.Durak",
+    "lat": 39.46245198188576,
+    "lng": 29.99149854272591
+  },
+  {
+    "name": "657 Konutlari 10.Durak",
+    "lat": 39.46012039386394,
+    "lng": 29.99197716217602
+  },
+  {
+    "name": "657 Konutlari 11.Durak",
+    "lat": 39.4566882783523,
+    "lng": 29.99174189147801
+  },
+  {
+    "name": "657 Konutlari 5.Durak",
+    "lat": 39.46240125291982,
+    "lng": 29.99155429854096
+  },
+  {
+    "name": "657 Konutlari 6.Durak",
+    "lat": 39.46305695083048,
+    "lng": 29.98614492745709
+  },
+  {
+    "name": "657 Konutlari 7.Durak",
+    "lat": 39.46317533126216,
+    "lng": 29.9861380191562
+  },
+  {
+    "name": "657 Konutları 1.Durak",
+    "lat": 39.46245198188576,
+    "lng": 29.99149854272591
+  },
+  {
+    "name": "657 Konutları 10.Durak",
+    "lat": 39.46012039386394,
+    "lng": 29.99197716217602
+  },
+  {
+    "name": "657 Konutları 11.Durak",
+    "lat": 39.4566882783523,
+    "lng": 29.99174189147801
+  },
+  {
+    "name": "657 Konutları 2.Durak",
+    "lat": 39.46137626910672,
+    "lng": 29.98746762380302
+  },
+  {
+    "name": "657 Konutları 3.Durak",
+    "lat": 39.46121389798779,
+    "lng": 29.98538119134221
+  },
+  {
+    "name": "657 Konutları 6.Durak",
+    "lat": 39.46305695083048,
+    "lng": 29.98614492745709
+  },
+  {
+    "name": "657 Konutları 7.Durak",
+    "lat": 39.46317533126216,
+    "lng": 29.9861380191562
+  },
+  {
+    "name": "657 Konutları 8.Durak",
+    "lat": 39.46415372731162,
+    "lng": 29.98506706877861
+  },
+  {
+    "name": "657 Konutları 9.Durak",
+    "lat": 39.46418503142061,
+    "lng": 29.98493566512915
+  },
+  {
+    "name": "657 Konutları Son Durak1",
+    "lat": 39.46548341285808,
+    "lng": 29.98800787706887
+  },
+  {
+    "name": "75.Yıl Mah. 1.Durak",
+    "lat": 39.39866494401933,
+    "lng": 30.02139054910901
+  },
+  {
+    "name": "75.Yıl Mah. 10.Durak",
+    "lat": 39.39958440735298,
+    "lng": 30.02006182700291
+  },
+  {
+    "name": "75.Yıl Mah. 11.Durak",
+    "lat": 39.39870032896435,
+    "lng": 30.02326126891335
+  },
+  {
+    "name": "75.Yıl Mah. 12.Durak",
+    "lat": 39.40283961293503,
+    "lng": 30.01152323511421
+  },
+  {
+    "name": "75.Yıl Mah. 14.Durak",
+    "lat": 39.40178998099574,
+    "lng": 30.01450758276756
+  },
+  {
+    "name": "75.Yıl Mah. 15.Durak",
+    "lat": 39.40024283324302,
+    "lng": 30.01554734706799
+  },
+  {
+    "name": "75.Yıl Mah. 16.Durak",
+    "lat": 39.39897225939539,
+    "lng": 30.01908040774536
+  },
+  {
+    "name": "75.Yıl Mah. 17.Durak",
+    "lat": 39.39849188910126,
+    "lng": 30.02177383167934
+  },
+  {
+    "name": "75.Yıl Mah. 2.Durak",
+    "lat": 39.39906373742101,
+    "lng": 30.01903781137415
+  },
+  {
+    "name": "75.Yıl Mah. 3.Durak",
+    "lat": 39.40015266243461,
+    "lng": 30.01598244645249
+  },
+  {
+    "name": "75.Yıl Mah. 4.Durak",
+    "lat": 39.40201490565968,
+    "lng": 30.01446073618728
+  },
+  {
+    "name": "75.Yıl Mah. 6.Durak",
+    "lat": 39.4029760366092,
+    "lng": 30.01152411554011
+  },
+  {
+    "name": "75.Yıl Mah. 8.Durak",
+    "lat": 39.40380650832578,
+    "lng": 30.01372240972552
+  },
+  {
+    "name": "75.Yıl Mah. 9.Durak",
+    "lat": 39.40153973420906,
+    "lng": 30.01626407488415
+  },
+  {
+    "name": "Abdurrahmanpasa Okul Duragı",
+    "lat": 39.4171938361479,
+    "lng": 29.98027899261718
+  },
+  {
+    "name": "Abdurrahmanpaşa İÖO. Durağı",
+    "lat": 39.4171938361479,
+    "lng": 29.98027899261718
+  },
+  {
+    "name": "Abdülhamithan Parkı 1.Durak",
+    "lat": 39.42470084006203,
+    "lng": 29.99375082887625
+  },
+  {
+    "name": "Abdülhamithan Parkı 2.Durak",
+    "lat": 39.42459373764364,
+    "lng": 29.9937180928652
+  },
+  {
+    "name": "Agacköy Mah. 1. Durak",
+    "lat": 39.37985453652767,
+    "lng": 30.06602444141859
+  },
+  {
+    "name": "Agacköy Mah. 10. Durak",
+    "lat": 39.37760150789179,
+    "lng": 30.08087384076027
+  },
+  {
+    "name": "Agacköy Mah. 2. Durak",
+    "lat": 39.37741074501315,
+    "lng": 30.08374300845341
+  },
+  {
+    "name": "Agacköy Mah. 3. Durak",
+    "lat": 39.3777624969033,
+    "lng": 30.08091351521331
+  },
+  {
+    "name": "Agacköy Mah. 4. Durak",
+    "lat": 39.37916449112369,
+    "lng": 30.07837987180817
+  },
+  {
+    "name": "Agacköy Mah. 5. Durak",
+    "lat": 39.37959388175364,
+    "lng": 30.0763280770647
+  },
+  {
+    "name": "Agacköy Mah. 6. Durak",
+    "lat": 39.38016172859041,
+    "lng": 30.07428460947714
+  },
+  {
+    "name": "Agacköy Mah. 7. Durak",
+    "lat": 39.38037648995691,
+    "lng": 30.0729132092583
+  },
+  {
+    "name": "Agacköy Mah. 8. Durak",
+    "lat": 39.37957250293513,
+    "lng": 30.07620075124624
+  },
+  {
+    "name": "Agacköy Mah. 9. Durak",
+    "lat": 39.37911792830378,
+    "lng": 30.07829868906559
+  },
+  {
+    "name": "Akkent Halk Ekmek Durağı",
+    "lat": 39.45580927981885,
+    "lng": 29.97611657058278
+  },
+  {
+    "name": "Akkent İş Merkezi 1.Durak",
+    "lat": 39.45430800232786,
+    "lng": 29.98889483651768
+  },
+  {
+    "name": "Akkent İş Merkezi 2.Durak",
+    "lat": 39.45411090355541,
+    "lng": 29.98901564284865
+  },
+  {
+    "name": "Akkent Kültür Merkezi 1.Durak",
+    "lat": 39.45656499432351,
+    "lng": 29.97762946143672
+  },
+  {
+    "name": "Akkent Kültür Merkezi 2.Durak",
+    "lat": 39.45647286038144,
+    "lng": 29.97705942735892
+  },
+  {
+    "name": "Akkent Kültür Merkezi 2.Durak",
+    "lat": 39.4566105430683,
+    "lng": 29.97737182730121
+  },
+  {
+    "name": "Akkent Kültür Merkezi 2.Durak",
+    "lat": 39.45661402850169,
+    "lng": 29.97739468620302
+  },
+  {
+    "name": "Akkent Mah. 1.Durak",
+    "lat": 39.45554960407866,
+    "lng": 29.99046985552685
+  },
+  {
+    "name": "Akkent Mah. 10.Durak",
+    "lat": 39.45637186170768,
+    "lng": 29.97712123328673
+  },
+  {
+    "name": "Akkent Mah. 11.Durak",
+    "lat": 39.45767184368129,
+    "lng": 29.97898580533021
+  },
+  {
+    "name": "Akkent Mah. 12.Durak",
+    "lat": 39.45772103943825,
+    "lng": 29.97895198954098
+  },
+  {
+    "name": "Akkent Mah. 13.Durak",
+    "lat": 39.45846429324057,
+    "lng": 29.97631019275796
+  },
+  {
+    "name": "Akkent Mah. 14.Durak",
+    "lat": 39.45837889576416,
+    "lng": 29.97638591127493
+  },
+  {
+    "name": "Akkent Mah. 15.Durak",
+    "lat": 39.4587106330243,
+    "lng": 29.97555243496247
+  },
+  {
+    "name": "Akkent Mah. 16.Durak",
+    "lat": 39.46044893978534,
+    "lng": 29.97500309781626
+  },
+  {
+    "name": "Akkent Mah. 17.Durak",
+    "lat": 39.46031285394649,
+    "lng": 29.97466044482034
+  },
+  {
+    "name": "Akkent Mah. 2.Durak",
+    "lat": 39.45544674524746,
+    "lng": 29.99019695957365
+  },
+  {
+    "name": "Akkent Mah. 3.Durak",
+    "lat": 39.45507809909305,
+    "lng": 29.98295893575305
+  },
+  {
+    "name": "Akkent Mah. 4.Durak",
+    "lat": 39.45509386664315,
+    "lng": 29.98310583309007
+  },
+  {
+    "name": "Akkent Mah. 5.Durak",
+    "lat": 39.45378357380137,
+    "lng": 29.97865797720205
+  },
+  {
+    "name": "Akkent Mah. 6.Durak",
+    "lat": 39.45363102279531,
+    "lng": 29.97840683796333
+  },
+  {
+    "name": "Akkent Mah. 7.Durak",
+    "lat": 39.453163824943,
+    "lng": 29.9766339450592
+  },
+  {
+    "name": "Akkent Mah. 8.Durak",
+    "lat": 39.45321113866081,
+    "lng": 29.97612678434438
+  },
+  {
+    "name": "Akkent Mah. 9.Durak",
+    "lat": 39.45556765765061,
+    "lng": 29.97580255789991
+  },
+  {
+    "name": "Akşemsettin Cami Durağı",
+    "lat": 39.40505500257115,
+    "lng": 30.02739212992504
+  },
+  {
+    "name": "Alayunt Mah. 1. Durak",
+    "lat": 39.40390505683131,
+    "lng": 30.08820440363396
+  },
+  {
+    "name": "Alayunt Mah. 2. Durak",
+    "lat": 39.39832623089978,
+    "lng": 30.09929405319544
+  },
+  {
+    "name": "Alayunt Mah. 3. Durak",
+    "lat": 39.39663559073626,
+    "lng": 30.10311944945326
+  },
+  {
+    "name": "Alayunt Mah. 4. Durak",
+    "lat": 39.39803959554477,
+    "lng": 30.10470004113531
+  },
+  {
+    "name": "Alayunt Mah. 5. Durak",
+    "lat": 39.40006316948808,
+    "lng": 30.10696033252882
+  },
+  {
+    "name": "Alayunt Mah. 6. Durak",
+    "lat": 39.40027635480561,
+    "lng": 30.10701999319952
+  },
+  {
+    "name": "Alayunt Mah. 7. Durak",
+    "lat": 39.39839791325152,
+    "lng": 30.10490051051514
+  },
+  {
+    "name": "Alayunt Mah. 8. Durak",
+    "lat": 39.39673864639531,
+    "lng": 30.10299275852413
+  },
+  {
+    "name": "Alayunt Mah. 9. Durak",
+    "lat": 39.39824647248089,
+    "lng": 30.09963888369483
+  },
+  {
+    "name": "Ali Güral Lisesi 1.Durak",
+    "lat": 39.41616288878247,
+    "lng": 30.00013696072114
+  },
+  {
+    "name": "Ali Güral Lisesi 2.Durak",
+    "lat": 39.41617801530879,
+    "lng": 30.00048022424965
+  },
+  {
+    "name": "Alp Market Durağı",
+    "lat": 39.42775204771215,
+    "lng": 29.98534462581858
+  },
+  {
+    "name": "Anadolu Has. 1. Durak",
+    "lat": 39.41626929395126,
+    "lng": 29.99320193619572
+  },
+  {
+    "name": "Anadolu Has. 2. Durak",
+    "lat": 39.41619706882678,
+    "lng": 29.9929937611729
+  },
+  {
+    "name": "Anadolu Kız Meslek L. Durağı",
+    "lat": 39.4194722153559,
+    "lng": 29.98908004036429
+  },
+  {
+    "name": "Anadolukizmeslekduragi",
+    "lat": 39.4194722153559,
+    "lng": 29.98908004036429
+  },
+  {
+    "name": "Andız Mah. 1.Durak",
+    "lat": 39.49031483242584,
+    "lng": 29.90312082421252
+  },
+  {
+    "name": "Andız Mah. 2.Durak",
+    "lat": 39.4967747667556,
+    "lng": 29.89958942235545
+  },
+  {
+    "name": "Andız Mah. 3.Durak",
+    "lat": 39.49859199775816,
+    "lng": 29.89909858929853
+  },
+  {
+    "name": "Andız Mah. 4.Durak",
+    "lat": 39.50094344855415,
+    "lng": 29.89961142021767
+  },
+  {
+    "name": "Andız Mah. 5.Durak",
+    "lat": 39.50350838303491,
+    "lng": 29.8997413426247
+  },
+  {
+    "name": "Atatürk İlkokulu 1.Durak",
+    "lat": 39.45332378524171,
+    "lng": 29.98785224467239
+  },
+  {
+    "name": "Atatürk İlkokulu 2.Durak",
+    "lat": 39.4534386023501,
+    "lng": 29.9877638799874
+  },
+  {
+    "name": "Azot Fabrika Camii Durağı",
+    "lat": 39.47051922895266,
+    "lng": 30.0270101415816
+  },
+  {
+    "name": "Azot Fabrika Durağı",
+    "lat": 39.46963010866853,
+    "lng": 30.02673759826923
+  },
+  {
+    "name": "Aşıklar Çesmesi 2. Durak",
+    "lat": 39.41146397694769,
+    "lng": 30.00069202868091
+  },
+  {
+    "name": "Aşıklar Çeşmesi 1. Durak",
+    "lat": 39.4116344925281,
+    "lng": 30.00081658705428
+  },
+  {
+    "name": "Bahçe Konakları 1.Durak",
+    "lat": 39.45412881911845,
+    "lng": 29.98086678605917
+  },
+  {
+    "name": "Bahçe Konakları 2.Durak",
+    "lat": 39.45404193535197,
+    "lng": 29.98092176160058
+  },
+  {
+    "name": "Bahçelievler Mah. 1.Durak",
+    "lat": 39.42793784432785,
+    "lng": 29.96314254926514
+  },
+  {
+    "name": "Bahçelievler Mah. 10.Durak",
+    "lat": 39.43188988052829,
+    "lng": 29.94865301963111
+  },
+  {
+    "name": "Bahçelievler Mah. 11.Durak",
+    "lat": 39.43179859580953,
+    "lng": 29.95070872298157
+  },
+  {
+    "name": "Bahçelievler Mah. 12.Durak",
+    "lat": 39.43134641309919,
+    "lng": 29.95259593597519
+  },
+  {
+    "name": "Bahçelievler Mah. 13.Durak",
+    "lat": 39.4303622297934,
+    "lng": 29.95463346747698
+  },
+  {
+    "name": "Bahçelievler Mah. 14.Durak",
+    "lat": 39.42913988649044,
+    "lng": 29.95663184440296
+  },
+  {
+    "name": "Bahçelievler Mah. 15.Durak",
+    "lat": 39.43882030781523,
+    "lng": 29.95428180853331
+  },
+  {
+    "name": "Bahçelievler Mah. 16.Durak",
+    "lat": 39.43209114952717,
+    "lng": 29.95980640183733
+  },
+  {
+    "name": "Bahçelievler Mah. 17.Durak",
+    "lat": 39.43020947728012,
+    "lng": 29.96080237977447
+  },
+  {
+    "name": "Bahçelievler Mah. 18.Durak",
+    "lat": 39.42880209573858,
+    "lng": 29.96230120818841
+  },
+  {
+    "name": "Bahçelievler Mah. 2.Durak",
+    "lat": 39.42842726052518,
+    "lng": 29.96009025777384
+  },
+  {
+    "name": "Bahçelievler Mah. 3.Durak",
+    "lat": 39.42880874350857,
+    "lng": 29.95760888034549
+  },
+  {
+    "name": "Bahçelievler Mah. 4.Durak",
+    "lat": 39.42919614077015,
+    "lng": 29.95472547268825
+  },
+  {
+    "name": "Bahçelievler Mah. 5.Durak",
+    "lat": 39.42962922290682,
+    "lng": 29.9522384135387
+  },
+  {
+    "name": "Bahçelievler Mah. 6.Durak",
+    "lat": 39.42930087947652,
+    "lng": 29.95657717000795
+  },
+  {
+    "name": "Bahçelievler Mah. 7.Durak",
+    "lat": 39.43030470351029,
+    "lng": 29.95492583364465
+  },
+  {
+    "name": "Bahçelievler Mah. 8.Durak",
+    "lat": 39.43149595118275,
+    "lng": 29.95254240005952
+  },
+  {
+    "name": "Bahçelievler Mah. 9.Durak",
+    "lat": 39.431879441758,
+    "lng": 29.95046741694679
+  },
+  {
+    "name": "Bermuda Büfe 1.Durak",
+    "lat": 39.42358623636963,
+    "lng": 29.98858898945019
+  },
+  {
+    "name": "Bölcek Cami Durağı",
+    "lat": 39.44619456417344,
+    "lng": 29.94708352146359
+  },
+  {
+    "name": "Bölcek Mah. 1.Durak",
+    "lat": 39.43870654147531,
+    "lng": 29.95464117419084
+  },
+  {
+    "name": "Bölcek Mah. 2.Durak",
+    "lat": 39.44382884075971,
+    "lng": 29.94966339555519
+  },
+  {
+    "name": "Bölcek Mah. 3.Durak",
+    "lat": 39.44574382371077,
+    "lng": 29.94773861432293
+  },
+  {
+    "name": "Bölcek Mah. 4.Durak",
+    "lat": 39.45169504005347,
+    "lng": 29.94003114823115
+  },
+  {
+    "name": "Bölcek Mah. 5.Durak",
+    "lat": 39.44365025278733,
+    "lng": 29.9496021216326
+  },
+  {
+    "name": "Bölcek Okulu 1.Durak",
+    "lat": 39.44852011343173,
+    "lng": 29.94463152741983
+  },
+  {
+    "name": "Bölcek Okulu 2.Durak",
+    "lat": 39.4484459047105,
+    "lng": 29.94428910420311
+  },
+  {
+    "name": "Büyük Sanayi Cad. 1.Durak",
+    "lat": 39.43347413789284,
+    "lng": 29.97217413303323
+  },
+  {
+    "name": "Büyük Sanayi Cad. 2.Durak",
+    "lat": 39.43319638212768,
+    "lng": 29.97239372253922
+  },
+  {
+    "name": "Can Çini Durağı",
+    "lat": 39.39346169138278,
+    "lng": 30.03521616906414
+  },
+  {
+    "name": "Ceza İnfaz Kurumu Durağı",
+    "lat": 39.4971837473664,
+    "lng": 29.94736569217582
+  },
+  {
+    "name": "Cimcik Besler Durağı",
+    "lat": 39.45796672912216,
+    "lng": 30.01679576089825
+  },
+  {
+    "name": "Civli Mah. 1.Durak",
+    "lat": 39.4705453079246,
+    "lng": 29.87648485390724
+  },
+  {
+    "name": "Civli Mah. 2.Durak",
+    "lat": 39.46905752901926,
+    "lng": 29.87729888836296
+  },
+  {
+    "name": "Civli Mah. 3.Durak",
+    "lat": 39.46785731602366,
+    "lng": 29.87864802565919
+  },
+  {
+    "name": "Civli Mah. 4.Durak",
+    "lat": 39.46784930270297,
+    "lng": 29.87885644585411
+  },
+  {
+    "name": "Civli Mah. 5.Durak",
+    "lat": 39.46700974109422,
+    "lng": 29.88122296836077
+  },
+  {
+    "name": "Civli Mah. 6.Durak",
+    "lat": 39.46611373249468,
+    "lng": 29.8832441846229
+  },
+  {
+    "name": "Civli Mah. 7.Durak",
+    "lat": 39.46429831806859,
+    "lng": 29.88681449369216
+  },
+  {
+    "name": "Civli Mah. 8.Durak",
+    "lat": 39.46351832285175,
+    "lng": 29.88809992698269
+  },
+  {
+    "name": "Cocuk Evleri S. Müd. 1.Durak",
+    "lat": 39.42887607566547,
+    "lng": 30.00448269500775
+  },
+  {
+    "name": "Cocuk Evleri S. Müd. 2.Durak",
+    "lat": 39.42892126027741,
+    "lng": 30.00402406307172
+  },
+  {
+    "name": "Cuma Pazarı Durağı",
+    "lat": 39.42623785646184,
+    "lng": 29.98773190489977
+  },
+  {
+    "name": "Cumhuriyet Mah. 1. Durak",
+    "lat": 39.41000708728278,
+    "lng": 30.00443180020909
+  },
+  {
+    "name": "Cumhuriyet Mah. 10. Durak",
+    "lat": 39.40870747615165,
+    "lng": 30.01804644017358
+  },
+  {
+    "name": "Cumhuriyet Mah. 11. Durak",
+    "lat": 39.40977107027269,
+    "lng": 30.01472889997637
+  },
+  {
+    "name": "Cumhuriyet Mah. 12. Durak",
+    "lat": 39.41051955126687,
+    "lng": 30.01269654598918
+  },
+  {
+    "name": "Cumhuriyet Mah. 13. Durak",
+    "lat": 39.41120147779925,
+    "lng": 30.01084899443945
+  },
+  {
+    "name": "Cumhuriyet Mah. 14. Durak",
+    "lat": 39.4124263138308,
+    "lng": 30.00646772134435
+  },
+  {
+    "name": "Cumhuriyet Mah. 15. Durak",
+    "lat": 39.41442965130189,
+    "lng": 30.00390017191658
+  },
+  {
+    "name": "Cumhuriyet Mah. 16. Durak",
+    "lat": 39.41429355340853,
+    "lng": 30.00380521776293
+  },
+  {
+    "name": "Cumhuriyet Mah. 17. Durak",
+    "lat": 39.41217426198194,
+    "lng": 30.00657112975419
+  },
+  {
+    "name": "Cumhuriyet Mah. 18. Durak",
+    "lat": 39.41120662896045,
+    "lng": 30.010273611906
+  },
+  {
+    "name": "Cumhuriyet Mah. 19. Durak",
+    "lat": 39.41033648456472,
+    "lng": 30.01285843777555
+  },
+  {
+    "name": "Cumhuriyet Mah. 2. Durak",
+    "lat": 39.40777886231095,
+    "lng": 30.01506233082193
+  },
+  {
+    "name": "Cumhuriyet Mah. 20. Durak",
+    "lat": 39.40965983058335,
+    "lng": 30.01466817487896
+  },
+  {
+    "name": "Cumhuriyet Mah. 21. Durak",
+    "lat": 39.40852453266167,
+    "lng": 30.01833381125433
+  },
+  {
+    "name": "Cumhuriyet Mah. 3. Durak",
+    "lat": 39.40941261911572,
+    "lng": 30.00932558629108
+  },
+  {
+    "name": "Cumhuriyet Mah. 4. Durak",
+    "lat": 39.41017885075252,
+    "lng": 30.00551663383675
+  },
+  {
+    "name": "Cumhuriyet Mah. 5. Durak",
+    "lat": 39.41083073014313,
+    "lng": 30.00303768015808
+  },
+  {
+    "name": "Cumhuriyet Mah. 6. Durak",
+    "lat": 39.4106989494133,
+    "lng": 30.00304994636845
+  },
+  {
+    "name": "Cumhuriyet Mah. 7. Durak",
+    "lat": 39.41003949317179,
+    "lng": 30.00650044511803
+  },
+  {
+    "name": "Cumhuriyet Mah. 8. Durak",
+    "lat": 39.40819124466355,
+    "lng": 30.01208716345373
+  },
+  {
+    "name": "Cumhuriyet Mah. 9. Durak",
+    "lat": 39.40758665614748,
+    "lng": 30.01525295859454
+  },
+  {
+    "name": "Demirciören Mah. 1.Durak",
+    "lat": 39.45339685557976,
+    "lng": 29.86361202749483
+  },
+  {
+    "name": "Demirciören Mah. 10.Durak",
+    "lat": 39.45136916514571,
+    "lng": 29.87543304482598
+  },
+  {
+    "name": "Demirciören Mah. 11.Durak",
+    "lat": 39.45245636169717,
+    "lng": 29.87840428822541
+  },
+  {
+    "name": "Demirciören Mah. 2.Durak",
+    "lat": 39.45149572241832,
+    "lng": 29.86452086498827
+  },
+  {
+    "name": "Demirciören Mah. 3.Durak",
+    "lat": 39.45132082667625,
+    "lng": 29.86465969847398
+  },
+  {
+    "name": "Demirciören Mah. 4.Durak",
+    "lat": 39.45015099181618,
+    "lng": 29.86622904890415
+  },
+  {
+    "name": "Demirciören Mah. 5.Durak",
+    "lat": 39.45097869416063,
+    "lng": 29.86657446821145
+  },
+  {
+    "name": "Demirciören Mah. 6.Durak",
+    "lat": 39.45105772688122,
+    "lng": 29.86665411753107
+  },
+  {
+    "name": "Demirciören Mah. 7.Durak",
+    "lat": 39.45153776927113,
+    "lng": 29.86840182696175
+  },
+  {
+    "name": "Demirciören Mah. 8.Durak",
+    "lat": 39.4518821573015,
+    "lng": 29.86982968897507
+  },
+  {
+    "name": "Demirciören Mah. 9.Durak",
+    "lat": 39.45117889451215,
+    "lng": 29.87286477408447
+  },
+  {
+    "name": "Devlet Hatun Caddesi 1.Durak",
+    "lat": 39.41941677201491,
+    "lng": 29.98096401804336
+  },
+  {
+    "name": "Devlet Hatun Caddesi 2.Durak",
+    "lat": 39.42045692494225,
+    "lng": 29.98311854326319
+  },
+  {
+    "name": "DomaniclerP.Duragi",
+    "lat": 39.42109201616825,
+    "lng": 29.98681751899658
+  },
+  {
+    "name": "Domaniçler P. Durağı",
+    "lat": 39.42109201616825,
+    "lng": 29.98681751899658
+  },
+  {
+    "name": "DPÜ Alt Gidiş Durağı",
+    "lat": 39.47733489662789,
+    "lng": 29.90620056934939
+  },
+  {
+    "name": "DPÜ Alt Giriş Durağı",
+    "lat": 39.47843687349533,
+    "lng": 29.9053390336455
+  },
+  {
+    "name": "DPÜ Fen Edebiyat 1.Durak",
+    "lat": 39.47990872529741,
+    "lng": 29.90185220397074
+  },
+  {
+    "name": "DPÜ Fen Edebiyat 2.Durak",
+    "lat": 39.48022469891483,
+    "lng": 29.90186045141261
+  },
+  {
+    "name": "DPÜ İİBF 1.Durak",
+    "lat": 39.47790784817128,
+    "lng": 29.90461098599546
+  },
+  {
+    "name": "DPÜ İİBF 2.Durak",
+    "lat": 39.47813580010541,
+    "lng": 29.90472066950731
+  },
+  {
+    "name": "DPÜ Kız Yurdu 2.Durak",
+    "lat": 39.4847005364256,
+    "lng": 29.88773524744629
+  },
+  {
+    "name": "DPÜ Mühendislik 1.Durak",
+    "lat": 39.48201552745849,
+    "lng": 29.89896944679532
+  },
+  {
+    "name": "DPÜ Mühendislik 2.Durak",
+    "lat": 39.48229121601951,
+    "lng": 29.89906744477579
+  },
+  {
+    "name": "DPÜ Olimpik Havuz 1.Durak",
+    "lat": 39.48373900676092,
+    "lng": 29.89433455447873
+  },
+  {
+    "name": "DPÜ Olimpik Havuz 2.Durak",
+    "lat": 39.48353546320679,
+    "lng": 29.89434769002496
+  },
+  {
+    "name": "DPÜ Son Durak",
+    "lat": 39.48501370874467,
+    "lng": 29.88756922859197
+  },
+  {
+    "name": "DPÜ Taş Kapı Durağı",
+    "lat": 39.48180606092199,
+    "lng": 29.90106702753637
+  },
+  {
+    "name": "DPÜ Tıp Fakültesi Durağı",
+    "lat": 39.48677399148314,
+    "lng": 29.88511312753757
+  },
+  {
+    "name": "DPÜ Yabancı Diller 1.Durak",
+    "lat": 39.47841452182335,
+    "lng": 29.8935610748652
+  },
+  {
+    "name": "DPÜ Yabancı Diller 2.Durak",
+    "lat": 39.47837187608932,
+    "lng": 29.89267882452168
+  },
+  {
+    "name": "DPÜ Zafertepe Kız Yurdu",
+    "lat": 39.48100130250349,
+    "lng": 29.89010350428466
+  },
+  {
+    "name": "DPÜ Üst Geçit Durağı",
+    "lat": 39.48216032652466,
+    "lng": 29.90171005004764
+  },
+  {
+    "name": "DPÜGüzel San.-Mimarlik Durağı",
+    "lat": 39.48344743408417,
+    "lng": 29.89733502552149
+  },
+  {
+    "name": "Dumlupınar Mah. 1. Durak",
+    "lat": 39.3949321783236,
+    "lng": 30.04378332558954
+  },
+  {
+    "name": "Dumlupınar Mah. 10. Durak",
+    "lat": 39.40523829257733,
+    "lng": 30.03085544955518
+  },
+  {
+    "name": "Dumlupınar Mah. 11. Durak",
+    "lat": 39.39662490070575,
+    "lng": 30.03381034454327
+  },
+  {
+    "name": "Dumlupınar Mah. 12. Durak",
+    "lat": 39.39869074069706,
+    "lng": 30.03298739568654
+  },
+  {
+    "name": "Dumlupınar Mah. 13. Durak",
+    "lat": 39.40108468191941,
+    "lng": 30.03197301178399
+  },
+  {
+    "name": "Dumlupınar Mah. 14. Durak",
+    "lat": 39.40385306894665,
+    "lng": 30.03027540164739
+  },
+  {
+    "name": "Dumlupınar Mah. 15. Durak",
+    "lat": 39.3954501017397,
+    "lng": 30.04740286150922
+  },
+  {
+    "name": "Dumlupınar Mah. 16. Durak",
+    "lat": 39.39657549185241,
+    "lng": 30.04516463432522
+  },
+  {
+    "name": "Dumlupınar Mah. 17. Durak",
+    "lat": 39.39767660132933,
+    "lng": 30.04238611113323
+  },
+  {
+    "name": "Dumlupınar Mah. 18. Durak",
+    "lat": 39.40032786019133,
+    "lng": 30.04199589994289
+  },
+  {
+    "name": "Dumlupınar Mah. 19. Durak",
+    "lat": 39.40199017872942,
+    "lng": 30.04160112788826
+  },
+  {
+    "name": "Dumlupınar Mah. 2. Durak",
+    "lat": 39.39638770473594,
+    "lng": 30.04133874463057
+  },
+  {
+    "name": "Dumlupınar Mah. 20. Durak",
+    "lat": 39.40318988048734,
+    "lng": 30.03736777943069
+  },
+  {
+    "name": "Dumlupınar Mah. 21. Durak",
+    "lat": 39.40453809648326,
+    "lng": 30.03663255103867
+  },
+  {
+    "name": "Dumlupınar Mah. 22. Durak",
+    "lat": 39.40746686321366,
+    "lng": 30.03555882228055
+  },
+  {
+    "name": "Dumlupınar Mah. 23. Durak",
+    "lat": 39.40830160477715,
+    "lng": 30.03399969189709
+  },
+  {
+    "name": "Dumlupınar Mah. 24. Durak",
+    "lat": 39.4075795653523,
+    "lng": 30.03093294959908
+  },
+  {
+    "name": "Dumlupınar Mah. 25. Durak",
+    "lat": 39.40658110443028,
+    "lng": 30.03007377134278
+  },
+  {
+    "name": "Dumlupınar Mah. 26. Durak",
+    "lat": 39.40501824853803,
+    "lng": 30.03091310573603
+  },
+  {
+    "name": "Dumlupınar Mah. 27. Durak",
+    "lat": 39.40393633306703,
+    "lng": 30.03176356911566
+  },
+  {
+    "name": "Dumlupınar Mah. 28. Durak",
+    "lat": 39.40264562263904,
+    "lng": 30.03313895799279
+  },
+  {
+    "name": "Dumlupınar Mah. 29. Durak",
+    "lat": 39.40157998311769,
+    "lng": 30.03602903647434
+  },
+  {
+    "name": "Dumlupınar Mah. 3. Durak",
+    "lat": 39.39751668425716,
+    "lng": 30.03879711340728
+  },
+  {
+    "name": "Dumlupınar Mah. 30. Durak",
+    "lat": 39.40048911558345,
+    "lng": 30.03870588012147
+  },
+  {
+    "name": "Dumlupınar Mah. 31. Durak",
+    "lat": 39.39859212935499,
+    "lng": 30.03817240642543
+  },
+  {
+    "name": "Dumlupınar Mah. 32. Durak",
+    "lat": 39.39767198197472,
+    "lng": 30.03666020431276
+  },
+  {
+    "name": "Dumlupınar Mah. 33. Durak",
+    "lat": 39.39741984697801,
+    "lng": 30.03880989240616
+  },
+  {
+    "name": "Dumlupınar Mah. 34. Durak",
+    "lat": 39.39617378056933,
+    "lng": 30.04139993626547
+  },
+  {
+    "name": "Dumlupınar Mah. 35. Durak",
+    "lat": 39.39471074018528,
+    "lng": 30.04412983265528
+  },
+  {
+    "name": "Dumlupınar Mah. 36. Durak",
+    "lat": 39.40418181533696,
+    "lng": 30.02987547018737
+  },
+  {
+    "name": "Dumlupınar Mah. 37. Durak",
+    "lat": 39.40101381277216,
+    "lng": 30.03189477339617
+  },
+  {
+    "name": "Dumlupınar Mah. 38. Durak",
+    "lat": 39.39883593654049,
+    "lng": 30.03283157000402
+  },
+  {
+    "name": "Dumlupınar Mah. 39. Durak",
+    "lat": 39.39673894179505,
+    "lng": 30.03367706750905
+  },
+  {
+    "name": "Dumlupınar Mah. 4. Durak",
+    "lat": 39.39776112708915,
+    "lng": 30.03672116509678
+  },
+  {
+    "name": "Dumlupınar Mah. 40. Durak",
+    "lat": 39.39364549282246,
+    "lng": 30.03502853240789
+  },
+  {
+    "name": "Dumlupınar Mah. 41. Durak",
+    "lat": 39.40664127758021,
+    "lng": 30.03024337196126
+  },
+  {
+    "name": "Dumlupınar Mah. 42. Durak",
+    "lat": 39.40749596015698,
+    "lng": 30.03089981399117
+  },
+  {
+    "name": "Dumlupınar Mah. 43. Durak",
+    "lat": 39.40815394074358,
+    "lng": 30.03385595711696
+  },
+  {
+    "name": "Dumlupınar Mah. 44. Durak",
+    "lat": 39.40729488132096,
+    "lng": 30.03553206055161
+  },
+  {
+    "name": "Dumlupınar Mah. 45. Durak",
+    "lat": 39.40453707547258,
+    "lng": 30.03646498823777
+  },
+  {
+    "name": "Dumlupınar Mah. 46. Durak",
+    "lat": 39.4030410522837,
+    "lng": 30.03724648487477
+  },
+  {
+    "name": "Dumlupınar Mah. 47. Durak",
+    "lat": 39.40194432288593,
+    "lng": 30.04108813805843
+  },
+  {
+    "name": "Dumlupınar Mah. 48. Durak",
+    "lat": 39.40037543045747,
+    "lng": 30.04188595365595
+  },
+  {
+    "name": "Dumlupınar Mah. 49. Durak",
+    "lat": 39.39745414616953,
+    "lng": 30.04263160895382
+  },
+  {
+    "name": "Dumlupınar Mah. 5. Durak",
+    "lat": 39.39841327735414,
+    "lng": 30.03811481549015
+  },
+  {
+    "name": "Dumlupınar Mah. 50. Durak",
+    "lat": 39.39656443214119,
+    "lng": 30.04496890571179
+  },
+  {
+    "name": "Dumlupınar Mah. 51. Durak",
+    "lat": 39.39552409045508,
+    "lng": 30.04721783937519
+  },
+  {
+    "name": "Dumlupınar Mah. 6. Durak",
+    "lat": 39.40060777025893,
+    "lng": 30.03868110585437
+  },
+  {
+    "name": "Dumlupınar Mah. 7. Durak",
+    "lat": 39.40164340388356,
+    "lng": 30.03617782942767
+  },
+  {
+    "name": "Dumlupınar Mah. 8. Durak",
+    "lat": 39.40263313674051,
+    "lng": 30.03350140072049
+  },
+  {
+    "name": "Dumlupınar Mah. 9. Durak",
+    "lat": 39.40386715928782,
+    "lng": 30.03191150749471
+  },
+  {
+    "name": "Dumlupınar Stad. Durağı",
+    "lat": 39.41808234383846,
+    "lng": 29.99047624720838
+  },
+  {
+    "name": "Dörtyol Durağı",
+    "lat": 39.42767302852835,
+    "lng": 29.96405867447553
+  },
+  {
+    "name": "E.G. İmam Hatip Lis. 1. Durak",
+    "lat": 39.40473847876048,
+    "lng": 30.01405834831086
+  },
+  {
+    "name": "E.G. İmam Hatip Lis. 2. Durak",
+    "lat": 39.40460671968465,
+    "lng": 30.01408190225113
+  },
+  {
+    "name": "Ekbina Hastane Durağı",
+    "lat": 39.41789412359326,
+    "lng": 29.990338101018
+  },
+  {
+    "name": "Emniyet Müdürlüğü 1. Durak",
+    "lat": 39.43397680820573,
+    "lng": 29.95866072929307
+  },
+  {
+    "name": "Emniyet Müdürlüğü 2. Durak",
+    "lat": 39.43375085202143,
+    "lng": 29.9586047689953
+  },
+  {
+    "name": "Emniyet Müdürlüğü 3. Durak",
+    "lat": 39.43668074463685,
+    "lng": 29.95639899875891
+  },
+  {
+    "name": "Emniyet Müdürlüğü 4. Durak",
+    "lat": 39.43639217068264,
+    "lng": 29.95636811064109
+  },
+  {
+    "name": "Enne Camii Durağı",
+    "lat": 39.47417949138438,
+    "lng": 29.85559594270984
+  },
+  {
+    "name": "Enne Mah. 1.Durak",
+    "lat": 39.48045711486613,
+    "lng": 29.84858208370579
+  },
+  {
+    "name": "Enne Mah. 2.Durak",
+    "lat": 39.4803290698862,
+    "lng": 29.84867576688984
+  },
+  {
+    "name": "Enne Mah. 3.Durak",
+    "lat": 39.47406953633876,
+    "lng": 29.85395140971455
+  },
+  {
+    "name": "Enne Mah. 5.Durak",
+    "lat": 39.47672428963425,
+    "lng": 29.85892442749028
+  },
+  {
+    "name": "Enne Mah. 6.Durak",
+    "lat": 39.47679051280904,
+    "lng": 29.85897496312383
+  },
+  {
+    "name": "Enne Mah. 7.Durak",
+    "lat": 39.47719201377206,
+    "lng": 29.86081031940846
+  },
+  {
+    "name": "Enne Mezarlik Durağı",
+    "lat": 39.47679424336696,
+    "lng": 29.85529520435908
+  },
+  {
+    "name": "Erdogan Atasoy Cad. 1.Durak",
+    "lat": 39.42516493124528,
+    "lng": 29.99195822657309
+  },
+  {
+    "name": "Erdogan Atasoy Cad. 2.Durak",
+    "lat": 39.42515406647276,
+    "lng": 29.99163304687294
+  },
+  {
+    "name": "Erdogan Atasoy Cad. 3.Durak",
+    "lat": 39.42362728091387,
+    "lng": 29.99362147619537
+  },
+  {
+    "name": "Erdogan Atasoy Cad. 4.Durak",
+    "lat": 39.4233787323592,
+    "lng": 29.99354665414894
+  },
+  {
+    "name": "Erkacarsi 1.Durak",
+    "lat": 39.38911025345923,
+    "lng": 30.03740767449497
+  },
+  {
+    "name": "Erkacarsi 2.Durak",
+    "lat": 39.3882538556606,
+    "lng": 30.03807630646353
+  },
+  {
+    "name": "Eski Belediye İşhanı Durağı",
+    "lat": 39.41829416586938,
+    "lng": 29.97760304802814
+  },
+  {
+    "name": "Eski Cezaevi 1.Durağı",
+    "lat": 39.437144598592,
+    "lng": 30.00013152270276
+  },
+  {
+    "name": "Eski Cezaevi 2.Durağı",
+    "lat": 39.4376500098068,
+    "lng": 30.00017037591853
+  },
+  {
+    "name": "Evliya Çelebi Has. 1.durak",
+    "lat": 39.42523219339552,
+    "lng": 29.96431504831418
+  },
+  {
+    "name": "Evliya Çelebi Has. 2.Durak",
+    "lat": 39.42511238702526,
+    "lng": 29.96420259647605
+  },
+  {
+    "name": "Evliya Çelebi Mah. 1. Durak",
+    "lat": 39.42094328984412,
+    "lng": 29.96145547650099
+  },
+  {
+    "name": "Evliya Çelebi Mah. 10. Durak",
+    "lat": 39.42573504367718,
+    "lng": 29.95165967047481
+  },
+  {
+    "name": "Evliya Çelebi Mah. 11. Durak",
+    "lat": 39.43486091232,
+    "lng": 29.93409775083587
+  },
+  {
+    "name": "Evliya Çelebi Mah. 12. Durak",
+    "lat": 39.43356881653334,
+    "lng": 29.93578748289016
+  },
+  {
+    "name": "Evliya Çelebi Mah. 13. Durak",
+    "lat": 39.43247996531343,
+    "lng": 29.93897543201995
+  },
+  {
+    "name": "Evliya Çelebi Mah. 14. Durak",
+    "lat": 39.43147203890342,
+    "lng": 29.9416889010918
+  },
+  {
+    "name": "Evliya Çelebi Mah. 15. Durak",
+    "lat": 39.43070805534689,
+    "lng": 29.94422912119039
+  },
+  {
+    "name": "Evliya Çelebi Mah. 16. Durak",
+    "lat": 39.43005573983503,
+    "lng": 29.94818713472229
+  },
+  {
+    "name": "Evliya Çelebi Mah. 17. Durak",
+    "lat": 39.42950865535828,
+    "lng": 29.95174832767229
+  },
+  {
+    "name": "Evliya Çelebi Mah. 18. Durak",
+    "lat": 39.42915350703565,
+    "lng": 29.95430726897565
+  },
+  {
+    "name": "Evliya Çelebi Mah. 19. Durak",
+    "lat": 39.4286325372642,
+    "lng": 29.95743213500619
+  },
+  {
+    "name": "Evliya Çelebi Mah. 2. Durak",
+    "lat": 39.42743370485701,
+    "lng": 29.95036462369597
+  },
+  {
+    "name": "Evliya Çelebi Mah. 20. Durak",
+    "lat": 39.4282539240772,
+    "lng": 29.96033386611621
+  },
+  {
+    "name": "Evliya Çelebi Mah. 3. Durak",
+    "lat": 39.42749298678745,
+    "lng": 29.94968735104658
+  },
+  {
+    "name": "Evliya Çelebi Mah. 4. Durak",
+    "lat": 39.42794187775343,
+    "lng": 29.9480746856686
+  },
+  {
+    "name": "Evliya Çelebi Mah. 5. Durak",
+    "lat": 39.42790334689017,
+    "lng": 29.9478142773139
+  },
+  {
+    "name": "Evliya Çelebi Mah. 6. Durak",
+    "lat": 39.4290909806584,
+    "lng": 29.94800679507485
+  },
+  {
+    "name": "Evliya Çelebi Mah. 7. Durak",
+    "lat": 39.42415633124198,
+    "lng": 29.95376794353904
+  },
+  {
+    "name": "Evliya Çelebi Mah. 8. Durak",
+    "lat": 39.42410089565916,
+    "lng": 29.95373944935091
+  },
+  {
+    "name": "Evliya Çelebi Mah. 9. Durak",
+    "lat": 39.42570862281161,
+    "lng": 29.9517629476348
+  },
+  {
+    "name": "Fatih İlkokul 1.Durak",
+    "lat": 39.41239924957906,
+    "lng": 30.00022621119196
+  },
+  {
+    "name": "Fatih İlkokul 2.Durak",
+    "lat": 39.41233540196959,
+    "lng": 30.00003755629989
+  },
+  {
+    "name": "Fatih Mah. 1.Durak",
+    "lat": 39.4141808757233,
+    "lng": 29.99726524660473
+  },
+  {
+    "name": "Fatih Mah. 10.Durak",
+    "lat": 39.41959044575953,
+    "lng": 29.99736836703349
+  },
+  {
+    "name": "Fatih Mah. 2.Durak",
+    "lat": 39.41463122614087,
+    "lng": 29.99616066437279
+  },
+  {
+    "name": "Fatih Mah. 3.Durak",
+    "lat": 39.41509251784878,
+    "lng": 30.00191799905055
+  },
+  {
+    "name": "Fatih Mah. 4.Durak",
+    "lat": 39.41523827247214,
+    "lng": 30.00163735258224
+  },
+  {
+    "name": "Fatih Mah. 5.Durak",
+    "lat": 39.41582886351529,
+    "lng": 29.9983877714751
+  },
+  {
+    "name": "Fatih Mah. 6.Durak",
+    "lat": 39.41569231841616,
+    "lng": 29.99825972592759
+  },
+  {
+    "name": "Fatih Mah. 7.Durak",
+    "lat": 39.41758542027614,
+    "lng": 29.99712020836288
+  },
+  {
+    "name": "Fatih Mah. 8.Durak",
+    "lat": 39.41762097787166,
+    "lng": 29.99702265928366
+  },
+  {
+    "name": "Fatih Mah. 9.Durak",
+    "lat": 39.41954505611663,
+    "lng": 29.99749300332979
+  },
+  {
+    "name": "Fatih Sanayi Sitesi 1.Durak",
+    "lat": 39.43637795887457,
+    "lng": 29.97850573299254
+  },
+  {
+    "name": "Fatih Sanayi Sitesi 2.Durak",
+    "lat": 39.43504020491567,
+    "lng": 29.97683347641685
+  },
+  {
+    "name": "Fatih Sanayi Sitesi 3.Durak",
+    "lat": 39.43374631579306,
+    "lng": 29.97515878607922
+  },
+  {
+    "name": "Fatih Sanayi Sitesi 4.Durak",
+    "lat": 39.43361648414739,
+    "lng": 29.97531537404264
+  },
+  {
+    "name": "Fatih Sanayi Sitesi 5.Durak",
+    "lat": 39.43458916993357,
+    "lng": 29.97657645453022
+  },
+  {
+    "name": "Fatih Sanayi Sitesi 6.Durak",
+    "lat": 39.4360843889526,
+    "lng": 29.97849821508222
+  },
+  {
+    "name": "Fen Lisesi 1.Durak",
+    "lat": 39.38427068387764,
+    "lng": 30.04284397603579
+  },
+  {
+    "name": "Fen Lisesi 2.Durak",
+    "lat": 39.38419407185374,
+    "lng": 30.04281176311754
+  },
+  {
+    "name": "Fuar 1. Durak",
+    "lat": 39.43543644692137,
+    "lng": 30.00069680275781
+  },
+  {
+    "name": "Fuar 2. Durak",
+    "lat": 39.43555175716205,
+    "lng": 30.0005607797573
+  },
+  {
+    "name": "Fuatpaşa Mah. 1.Durak",
+    "lat": 39.42781215158907,
+    "lng": 29.97641081175774
+  },
+  {
+    "name": "Galibi Vakfı Duragı",
+    "lat": 39.38680593876143,
+    "lng": 30.06516597477722
+  },
+  {
+    "name": "Gar Durağı",
+    "lat": 39.42009069630318,
+    "lng": 30.0006138819843
+  },
+  {
+    "name": "Gaybiefendi Mah. 1.Durak",
+    "lat": 39.42963403440219,
+    "lng": 29.98591173508748
+  },
+  {
+    "name": "Gaybiefendi Mah. 10.Durak",
+    "lat": 39.42872536717171,
+    "lng": 29.97851904347147
+  },
+  {
+    "name": "Gaybiefendi Mah. 2.Durak",
+    "lat": 39.42954056727562,
+    "lng": 29.98580316415008
+  },
+  {
+    "name": "Gaybiefendi Mah. 3.Durak",
+    "lat": 39.4313581613427,
+    "lng": 29.98655630092475
+  },
+  {
+    "name": "Gaybiefendi Mah. 4.Durak",
+    "lat": 39.43151346025689,
+    "lng": 29.98606376123771
+  },
+  {
+    "name": "Gaybiefendi Mah. 5.Durak",
+    "lat": 39.43228155567931,
+    "lng": 29.98441848718582
+  },
+  {
+    "name": "Gaybiefendi Mah. 6.Durak",
+    "lat": 39.43236054221428,
+    "lng": 29.98399267409134
+  },
+  {
+    "name": "Gaybiefendi Mah. 7.Durak",
+    "lat": 39.43241629925016,
+    "lng": 29.98203462604583
+  },
+  {
+    "name": "Gaybiefendi Mah. 8.Durak",
+    "lat": 39.43230452092604,
+    "lng": 29.98216643084901
+  },
+  {
+    "name": "Gaybiefendi Mah. 9.Durak",
+    "lat": 39.43139683841571,
+    "lng": 29.98040279376213
+  },
+  {
+    "name": "Gaybiefendi Sağlık M. Durağı",
+    "lat": 39.42621874188679,
+    "lng": 29.98743074671046
+  },
+  {
+    "name": "Gençlik Spor Durağı",
+    "lat": 39.41939227150549,
+    "lng": 29.98968744997394
+  },
+  {
+    "name": "Germiyan Kampüs 1. Durağı",
+    "lat": 39.39065277669719,
+    "lng": 30.03740321536026
+  },
+  {
+    "name": "Germiyan Kampüs 1.Durağı",
+    "lat": 39.39065277669719,
+    "lng": 30.03740321536026
+  },
+  {
+    "name": "Germiyan Kampüs 2.Durağı",
+    "lat": 39.390608512515,
+    "lng": 30.03722177042493
+  },
+  {
+    "name": "Geven Mah. 1.Durak",
+    "lat": 39.51326069004055,
+    "lng": 29.88993676133198
+  },
+  {
+    "name": "Geven Mah. 2.Durak",
+    "lat": 39.51281410921283,
+    "lng": 29.88838658299406
+  },
+  {
+    "name": "Geven Mah. 3.Durak",
+    "lat": 39.50967083769424,
+    "lng": 29.88480246684457
+  },
+  {
+    "name": "Geven Mah. 4.Durak",
+    "lat": 39.50653452932863,
+    "lng": 29.88103797871325
+  },
+  {
+    "name": "Gevrek Seydi Mah. 1.Durak",
+    "lat": 39.52769722684494,
+    "lng": 29.86046287021769
+  },
+  {
+    "name": "Gevrek Seydi Mah. 2.Durak",
+    "lat": 39.52782471890483,
+    "lng": 29.86039900543894
+  },
+  {
+    "name": "Gevrek Seydi Mah. 3.Durak",
+    "lat": 39.53051216550295,
+    "lng": 29.86165595717291
+  },
+  {
+    "name": "Gevrek Seydi Mah. 4.Durak",
+    "lat": 39.53096436812027,
+    "lng": 29.86152136897431
+  },
+  {
+    "name": "Gevrek Seydi Mah. 5.Durak",
+    "lat": 39.53300939667687,
+    "lng": 29.86088212711105
+  },
+  {
+    "name": "Gevrek Seydi Mah. 6.Durak",
+    "lat": 39.53483943306516,
+    "lng": 29.85951735416466
+  },
+  {
+    "name": "Gevrek Seydi Mah. 7.Durak",
+    "lat": 39.53307433676104,
+    "lng": 29.86072808466255
+  },
+  {
+    "name": "Girne Koleji 1.Durak",
+    "lat": 39.43902931339107,
+    "lng": 29.96956708089023
+  },
+  {
+    "name": "Girne Koleji 2.Durak",
+    "lat": 39.43905741587385,
+    "lng": 29.96988360459551
+  },
+  {
+    "name": "Grandeluxe Durağı",
+    "lat": 39.43910009997399,
+    "lng": 30.00177664401933
+  },
+  {
+    "name": "Gökerevleri 1.Durak",
+    "lat": 39.43902521073671,
+    "lng": 29.95191875007596
+  },
+  {
+    "name": "Gökerevleri 2.Durak",
+    "lat": 39.43707618938721,
+    "lng": 29.950160290195
+  },
+  {
+    "name": "Gökerevleri 3.Durak",
+    "lat": 39.43554677759776,
+    "lng": 29.95010876701926
+  },
+  {
+    "name": "Gökerevleri 4.Durak",
+    "lat": 39.43705753997208,
+    "lng": 29.9522290481391
+  },
+  {
+    "name": "Göç İdaresi Durağı",
+    "lat": 39.45724617814069,
+    "lng": 30.01232839793165
+  },
+  {
+    "name": "Gülsüm Güral Diş Has. Durağı",
+    "lat": 39.45694854318632,
+    "lng": 30.01511843544996
+  },
+  {
+    "name": "Gültepe Durağı",
+    "lat": 39.41774305943253,
+    "lng": 29.96119855267338
+  },
+  {
+    "name": "Güral Lav Durağı",
+    "lat": 39.45848205764313,
+    "lng": 30.01758443919218
+  },
+  {
+    "name": "Güveççi Mah. 1.Durak",
+    "lat": 39.44268767375558,
+    "lng": 29.91049075580711
+  },
+  {
+    "name": "Güveççi Mah. 10.Durak",
+    "lat": 39.44260520825662,
+    "lng": 29.91041416082514
+  },
+  {
+    "name": "Güveççi Mah. 2.Durak",
+    "lat": 39.44368000398726,
+    "lng": 29.90995920434285
+  },
+  {
+    "name": "Güveççi Mah. 3.Durak",
+    "lat": 39.44493689277412,
+    "lng": 29.9100304495186
+  },
+  {
+    "name": "Güveççi Mah. 4.Durak",
+    "lat": 39.44633170092377,
+    "lng": 29.91036310581617
+  },
+  {
+    "name": "Güveççi Mah. 5.Durak",
+    "lat": 39.44687208133922,
+    "lng": 29.90839115030048
+  },
+  {
+    "name": "Güveççi Mah. 6.Durak",
+    "lat": 39.44807575984208,
+    "lng": 29.90437465426607
+  },
+  {
+    "name": "Güveççi Mah. 7.Durak",
+    "lat": 39.44632028934215,
+    "lng": 29.91023627152496
+  },
+  {
+    "name": "Güveççi Mah. 8.Durak",
+    "lat": 39.44492749080767,
+    "lng": 29.90991822118524
+  },
+  {
+    "name": "Güveççi Mah. 9.Durak",
+    "lat": 39.44364051215337,
+    "lng": 29.90986104633585
+  },
+  {
+    "name": "Güzel Sanatlar Lisesi Durağı",
+    "lat": 39.38692206270199,
+    "lng": 30.04065102721357
+  },
+  {
+    "name": "Gıdacılar Sitesi 1. Durak",
+    "lat": 39.43569384013619,
+    "lng": 30.00269157430415
+  },
+  {
+    "name": "Gıdacılar Sitesi 2. Durak",
+    "lat": 39.43555671569671,
+    "lng": 30.00252168721523
+  },
+  {
+    "name": "Hacıazizler Mah. 1.Durak",
+    "lat": 39.37137135708316,
+    "lng": 30.03856900407785
+  },
+  {
+    "name": "Hacıazizler Mah. 2.Durak",
+    "lat": 39.37248261757396,
+    "lng": 30.03625419924015
+  },
+  {
+    "name": "Hacıazizler Mah. 3.Durak",
+    "lat": 39.37447540457437,
+    "lng": 30.03421535615516
+  },
+  {
+    "name": "Hacıazizler Mah. 4.Durak",
+    "lat": 39.37238387665894,
+    "lng": 30.03623029082371
+  },
+  {
+    "name": "Hal Cami 1.Durak",
+    "lat": 39.42553255356243,
+    "lng": 29.96647608679491
+  },
+  {
+    "name": "Hal Cami 2.Durak",
+    "lat": 39.42567191369685,
+    "lng": 29.96654386744916
+  },
+  {
+    "name": "Hamidiye Mah. 1. Durak",
+    "lat": 39.41218619511648,
+    "lng": 29.9826432416374
+  },
+  {
+    "name": "Hamidiye Mah. 2. Durak",
+    "lat": 39.41216773757464,
+    "lng": 29.9822481733279
+  },
+  {
+    "name": "Hamidiye Mah. 3. Durak",
+    "lat": 39.41261604486979,
+    "lng": 29.9809544057504
+  },
+  {
+    "name": "Hamidiye Mah. 4. Durak",
+    "lat": 39.41251818967594,
+    "lng": 29.98084396705349
+  },
+  {
+    "name": "Hamidiye Mah. 5. Durak",
+    "lat": 39.41193785432029,
+    "lng": 29.98023648222519
+  },
+  {
+    "name": "Hamidiye Mah. 6. Durak",
+    "lat": 39.41155160817289,
+    "lng": 29.98037793207196
+  },
+  {
+    "name": "Hamidiye Mah. 7. Durak",
+    "lat": 39.40923612914177,
+    "lng": 29.9824360686827
+  },
+  {
+    "name": "Hamidiye Mah. 8. Durak",
+    "lat": 39.40927460376398,
+    "lng": 29.98253656743449
+  },
+  {
+    "name": "Hava Lojmanları 1.Durak",
+    "lat": 39.4082328497508,
+    "lng": 30.0083386262263
+  },
+  {
+    "name": "Hava Lojmanları 2. Durak",
+    "lat": 39.40800218112527,
+    "lng": 30.00829927413114
+  },
+  {
+    "name": "Haymeana Hanımlar L. Durağı",
+    "lat": 39.40833901212571,
+    "lng": 30.0121796682795
+  },
+  {
+    "name": "Haymeana Hanımlar Lokali 1. Durak",
+    "lat": 39.40833901212571,
+    "lng": 30.0121796682795
+  },
+  {
+    "name": "Hilal Camii 1.Durak",
+    "lat": 39.46567792215178,
+    "lng": 29.98567351276828
+  },
+  {
+    "name": "Hilalkent Carşı Durağı",
+    "lat": 39.46817422154759,
+    "lng": 29.9646702656762
+  },
+  {
+    "name": "Hilalkent Mah. 1.Durak",
+    "lat": 39.46635694347411,
+    "lng": 29.9653123999004
+  },
+  {
+    "name": "Hilalkent Mah. 10.Durak",
+    "lat": 39.46897010210827,
+    "lng": 29.970017066542
+  },
+  {
+    "name": "Hilalkent Mah. 2.Durak",
+    "lat": 39.46651862378366,
+    "lng": 29.96530815832227
+  },
+  {
+    "name": "Hilalkent Mah. 3.Durak",
+    "lat": 39.46704906266267,
+    "lng": 29.96659290867121
+  },
+  {
+    "name": "Hilalkent Mah. 4.Durak",
+    "lat": 39.46700761337635,
+    "lng": 29.96649951861759
+  },
+  {
+    "name": "Hilalkent Mah. 5.Durak",
+    "lat": 39.46856007279844,
+    "lng": 29.96643757642877
+  },
+  {
+    "name": "Hilalkent Mah. 6.Durak",
+    "lat": 39.46899511496211,
+    "lng": 29.96652867657115
+  },
+  {
+    "name": "Hilalkent Mah. 7.Durak",
+    "lat": 39.47016396440023,
+    "lng": 29.96864799810681
+  },
+  {
+    "name": "Hilalkent Mah. 8.Durak",
+    "lat": 39.47004242409687,
+    "lng": 29.96786438806362
+  },
+  {
+    "name": "Hilalkent Mah. 9.Durak",
+    "lat": 39.46889205084435,
+    "lng": 29.969940360172
+  },
+  {
+    "name": "Hilton Durağı",
+    "lat": 39.42062030385219,
+    "lng": 29.98611573497122
+  },
+  {
+    "name": "Hilton Otel Karşı Durağı",
+    "lat": 39.42045036225289,
+    "lng": 29.98631225722063
+  },
+  {
+    "name": "hiltonotelkarsisi",
+    "lat": 39.42045036225289,
+    "lng": 29.98631225722063
+  },
+  {
+    "name": "Hisar altı Durağı",
+    "lat": 39.42067013663771,
+    "lng": 29.97316312910177
+  },
+  {
+    "name": "Hisar Giriş 1.Durak",
+    "lat": 39.419934879888,
+    "lng": 29.96216266492876
+  },
+  {
+    "name": "Hisar Karşı Durağı",
+    "lat": 39.41972217388998,
+    "lng": 29.96189041693382
+  },
+  {
+    "name": "Huzurevi 1.Durağı",
+    "lat": 39.40737147330659,
+    "lng": 29.98322856940711
+  },
+  {
+    "name": "Huzurevi 2.Durağı",
+    "lat": 39.40720390226961,
+    "lng": 29.9832671174907
+  },
+  {
+    "name": "Hürriyet Caddesi 1.Durak",
+    "lat": 39.41985638716203,
+    "lng": 29.97551394888841
+  },
+  {
+    "name": "Hürriyet Caddesi 2.Durak",
+    "lat": 39.42124612175846,
+    "lng": 29.97376332808648
+  },
+  {
+    "name": "Hürriyet Caddesi 3.Durak",
+    "lat": 39.42233633309967,
+    "lng": 29.97190155205682
+  },
+  {
+    "name": "Hürriyet Caddesi 4.Durak",
+    "lat": 39.42375812976358,
+    "lng": 29.97022997100783
+  },
+  {
+    "name": "Hürriyet Caddesi 5.Durak",
+    "lat": 39.42499336956236,
+    "lng": 29.96803586844227
+  },
+  {
+    "name": "İkizhüyük Mah. 1. Durak",
+    "lat": 39.41421860533595,
+    "lng": 30.06200476781103
+  },
+  {
+    "name": "İkizhüyük Mah. 2. Durak",
+    "lat": 39.41319018861029,
+    "lng": 30.06561941434497
+  },
+  {
+    "name": "İkizhüyük Mah. 3. Durak",
+    "lat": 39.41204841127081,
+    "lng": 30.06861669402402
+  },
+  {
+    "name": "İkizhüyük Mah. 4. Durak",
+    "lat": 39.41109587061111,
+    "lng": 30.07111494330297
+  },
+  {
+    "name": "İkizhüyük Mah. 5. Durak",
+    "lat": 39.4111490187473,
+    "lng": 30.07120941475257
+  },
+  {
+    "name": "İkizhüyük Mah. 6. Durak",
+    "lat": 39.41211238513612,
+    "lng": 30.06866105453152
+  },
+  {
+    "name": "İkizhüyük Mah. 7. Durak",
+    "lat": 39.41328719595819,
+    "lng": 30.06568190410679
+  },
+  {
+    "name": "İkizhüyük Mah. 8. Durak",
+    "lat": 39.41434445343062,
+    "lng": 30.062195696849
+  },
+  {
+    "name": "İl Özel İdare 1. Durak",
+    "lat": 39.40199135439064,
+    "lng": 30.0160956994507
+  },
+  {
+    "name": "İmam Evleri 1.Durak",
+    "lat": 39.39387320132522,
+    "lng": 30.04658582889824
+  },
+  {
+    "name": "İmam Evleri 2.Durak",
+    "lat": 39.3938740449205,
+    "lng": 30.04626168879936
+  },
+  {
+    "name": "İnköy İlkokulu 1.Durak",
+    "lat": 39.4542319700534,
+    "lng": 29.99899500409548
+  },
+  {
+    "name": "İnköy İlkokulu 2.Durak",
+    "lat": 39.45427646551833,
+    "lng": 29.99919371438797
+  },
+  {
+    "name": "İnköy Mah. 1.Durak",
+    "lat": 39.45301359812782,
+    "lng": 29.99679864265916
+  },
+  {
+    "name": "İnköy Mah. 2.Durak",
+    "lat": 39.4530533443464,
+    "lng": 29.99710439797071
+  },
+  {
+    "name": "İnköy Mah. 3.Durak",
+    "lat": 39.45504815738475,
+    "lng": 29.99491120118135
+  },
+  {
+    "name": "İnköy Mah. 4.Durak",
+    "lat": 39.45630418055809,
+    "lng": 29.99282040745085
+  },
+  {
+    "name": "İnköy Mah. 5.Durak",
+    "lat": 39.45644518730833,
+    "lng": 29.99275682394414
+  },
+  {
+    "name": "İnköy Mah. 6.Durak",
+    "lat": 39.45668077461625,
+    "lng": 29.99214545105107
+  },
+  {
+    "name": "İnköy Mah. 7.Durak",
+    "lat": 39.45994283060933,
+    "lng": 29.99233348993505
+  },
+  {
+    "name": "İstiklal Mah. 1.Durak",
+    "lat": 39.4235871729142,
+    "lng": 29.96556454576156
+  },
+  {
+    "name": "İstiklal Mah. 2.Durak",
+    "lat": 39.42211600741653,
+    "lng": 29.97016033577196
+  },
+  {
+    "name": "Karayolları 1. Durak",
+    "lat": 39.41273565898623,
+    "lng": 29.99827505938028
+  },
+  {
+    "name": "Karayolları 2. Durak",
+    "lat": 39.41261953220626,
+    "lng": 29.99810916546166
+  },
+  {
+    "name": "Kargocular Sitesi 1.Durak",
+    "lat": 39.43994898869822,
+    "lng": 30.00651951477625
+  },
+  {
+    "name": "Kargocular Sitesi 2.Durak",
+    "lat": 39.44055115389202,
+    "lng": 30.00676776387606
+  },
+  {
+    "name": "Kentpark Yanı 1.Durak",
+    "lat": 39.42742922112247,
+    "lng": 29.97021044213268
+  },
+  {
+    "name": "Kentpark Yanı 2.Durak",
+    "lat": 39.42736959679647,
+    "lng": 29.97043603025868
+  },
+  {
+    "name": "KentParkYan 2.Durak",
+    "lat": 39.42736959679647,
+    "lng": 29.97043603025868
+  },
+  {
+    "name": "Kirazpınar Mah. 1.Durak",
+    "lat": 39.46740790410279,
+    "lng": 29.91710570422921
+  },
+  {
+    "name": "Kirazpınar Mah. 2.Durak",
+    "lat": 39.46219026385961,
+    "lng": 29.90706304757133
+  },
+  {
+    "name": "Kirazpınar Mah. 3.Durak",
+    "lat": 39.46227858576304,
+    "lng": 29.90840620218364
+  },
+  {
+    "name": "Kirazpınar Mah. 4.Durak",
+    "lat": 39.46189973562782,
+    "lng": 29.9117588558452
+  },
+  {
+    "name": "KISGEM Durağı",
+    "lat": 39.43863588023573,
+    "lng": 29.97957085228217
+  },
+  {
+    "name": "Kübaş Bellona Durağı",
+    "lat": 39.44187422733418,
+    "lng": 30.00365254147906
+  },
+  {
+    "name": "Kümaş Durağı",
+    "lat": 39.48332837628345,
+    "lng": 30.03707263619086
+  },
+  {
+    "name": "Kütahya KYK İl Müd. 1. Durak",
+    "lat": 39.38533645660106,
+    "lng": 30.04168806120705
+  },
+  {
+    "name": "Kütahya KYK İl Müd. 2. Durak",
+    "lat": 39.38526179798463,
+    "lng": 30.04165567611729
+  },
+  {
+    "name": "Kütahya Modern Evler 1.Durak",
+    "lat": 39.43765302193424,
+    "lng": 29.96697840647104
+  },
+  {
+    "name": "Kütahya Modern Evler 2.Durak",
+    "lat": 39.4349444754392,
+    "lng": 29.96737778703553
+  },
+  {
+    "name": "Kütahya Modern Evler 3.Durak",
+    "lat": 39.43512286425526,
+    "lng": 29.9676229249197
+  },
+  {
+    "name": "Kütahya Modern Evler 4.Durak",
+    "lat": 39.43791507482881,
+    "lng": 29.96712855822064
+  },
+  {
+    "name": "Kütüphane Durağı",
+    "lat": 39.41886585494979,
+    "lng": 29.98786604504042
+  },
+  {
+    "name": "Kıbrıs Cad. 1. Durak",
+    "lat": 39.42506653534706,
+    "lng": 29.96834978168549
+  },
+  {
+    "name": "Kıbrıs Cad. 2. Durak",
+    "lat": 39.42390761970888,
+    "lng": 29.97083119208423
+  },
+  {
+    "name": "Kıbrıs Cad. 3. Durak",
+    "lat": 39.42290172054351,
+    "lng": 29.97246381738042
+  },
+  {
+    "name": "Kıbrıs Caddesi Meydan Durağı",
+    "lat": 39.42060173324403,
+    "lng": 29.97549433637997
+  },
+  {
+    "name": "Kılıçaslan Anadolu L. 1.Durak",
+    "lat": 39.41964108891911,
+    "lng": 29.99359634131194
+  },
+  {
+    "name": "Kılıçaslan Anadolu L. 2.Durak",
+    "lat": 39.41981219074643,
+    "lng": 29.99414764841814
+  },
+  {
+    "name": "Kılıçaslanlisesi2.durak",
+    "lat": 39.41981219074643,
+    "lng": 29.99414764841814
+  },
+  {
+    "name": "Kırgıllı Mah. 1.Durak",
+    "lat": 39.48920916273187,
+    "lng": 30.09133745240469
+  },
+  {
+    "name": "Kırgıllı Mah. 2.Durak",
+    "lat": 39.49134673851989,
+    "lng": 30.09012664522747
+  },
+  {
+    "name": "Kırklar Durağı",
+    "lat": 39.414862080512,
+    "lng": 29.95868229248941
+  },
+  {
+    "name": "Kızılbayır Durağı",
+    "lat": 39.46877412254132,
+    "lng": 29.91573349468334
+  },
+  {
+    "name": "Laleli Cami Durağı",
+    "lat": 39.42369461521154,
+    "lng": 29.9890296935109
+  },
+  {
+    "name": "LaleliCamiDuragi",
+    "lat": 39.42369461521154,
+    "lng": 29.9890296935109
+  },
+  {
+    "name": "Maliye 1. Durak",
+    "lat": 39.41449292352785,
+    "lng": 29.99536729531568
+  },
+  {
+    "name": "Maliye 1. Durak",
+    "lat": 39.41452021760955,
+    "lng": 29.99535685094602
+  },
+  {
+    "name": "Maliye 2. Durak",
+    "lat": 39.41336970697641,
+    "lng": 29.99630631205362
+  },
+  {
+    "name": "Maltepe Mah. 1. Durak",
+    "lat": 39.41461194340636,
+    "lng": 29.98780452801584
+  },
+  {
+    "name": "Maltepe Mah. 10. Durak",
+    "lat": 39.41241598096621,
+    "lng": 29.98735881522739
+  },
+  {
+    "name": "Maltepe Mah. 11. Durak",
+    "lat": 39.41306428213775,
+    "lng": 29.98534570179752
+  },
+  {
+    "name": "Maltepe Mah. 12. Durak",
+    "lat": 39.41276653910847,
+    "lng": 29.98505291747243
+  },
+  {
+    "name": "Maltepe Mah. 13. Durak",
+    "lat": 39.41344588372288,
+    "lng": 29.99049910400846
+  },
+  {
+    "name": "Maltepe Mah. 2. Durak",
+    "lat": 39.41460044114685,
+    "lng": 29.98769163220414
+  },
+  {
+    "name": "Maltepe Mah. 3. Durak",
+    "lat": 39.41332793949419,
+    "lng": 29.98866200986961
+  },
+  {
+    "name": "Maltepe Mah. 4. Durak",
+    "lat": 39.41322367931272,
+    "lng": 29.98851347173144
+  },
+  {
+    "name": "Maltepe Mah. 5. Durak",
+    "lat": 39.41181085494126,
+    "lng": 29.98990023984516
+  },
+  {
+    "name": "Maltepe Mah. 6. Durak",
+    "lat": 39.41186417816785,
+    "lng": 29.98992344110164
+  },
+  {
+    "name": "Maltepe Mah. 7. Durak",
+    "lat": 39.41133920573177,
+    "lng": 29.9889609690429
+  },
+  {
+    "name": "Maltepe Mah. 8. Durak",
+    "lat": 39.41132462493631,
+    "lng": 29.98889390417192
+  },
+  {
+    "name": "Maltepe Mah. 9. Durak",
+    "lat": 39.41244269856232,
+    "lng": 29.98741509152553
+  },
+  {
+    "name": "Maruf Mah. 1.Durak",
+    "lat": 39.41810388771477,
+    "lng": 29.96545005415588
+  },
+  {
+    "name": "Maruf Mah. 2.Durak",
+    "lat": 39.41956965745727,
+    "lng": 29.9643741599349
+  },
+  {
+    "name": "Mehmet Akif Ersoy M. 1.Durak",
+    "lat": 39.43220052811328,
+    "lng": 29.9444211623614
+  },
+  {
+    "name": "Mehmet Akif Ersoy M. 10.Durak",
+    "lat": 39.43033062675871,
+    "lng": 29.94726845374123
+  },
+  {
+    "name": "Mehmet Akif Ersoy M. 11.Durak",
+    "lat": 39.43087094825029,
+    "lng": 29.94409733757447
+  },
+  {
+    "name": "Mehmet Akif Ersoy M. 12.Durak",
+    "lat": 39.43155436591876,
+    "lng": 29.9418445880268
+  },
+  {
+    "name": "Mehmet Akif Ersoy M. 13.Durak",
+    "lat": 39.43268998334715,
+    "lng": 29.93862434303512
+  },
+  {
+    "name": "Mehmet Akif Ersoy M. 14.Durak",
+    "lat": 39.43373521871256,
+    "lng": 29.93560336252689
+  },
+  {
+    "name": "Mehmet Akif Ersoy M. 15.Durak",
+    "lat": 39.43521759212963,
+    "lng": 29.93406995965395
+  },
+  {
+    "name": "Mehmet Akif Ersoy M. 16.Durak",
+    "lat": 39.43730310261783,
+    "lng": 29.9300238476133
+  },
+  {
+    "name": "Mehmet Akif Ersoy M. 17.Durak",
+    "lat": 39.43804172390695,
+    "lng": 29.92688267663705
+  },
+  {
+    "name": "Mehmet Akif Ersoy M. 18.Durak",
+    "lat": 39.43803277335196,
+    "lng": 29.92635121396378
+  },
+  {
+    "name": "Mehmet Akif Ersoy M. 19.Durak",
+    "lat": 39.4370838061138,
+    "lng": 29.9302421387791
+  },
+  {
+    "name": "Mehmet Akif Ersoy M. 2.Durak",
+    "lat": 39.43394674766392,
+    "lng": 29.94353423578131
+  },
+  {
+    "name": "Mehmet Akif Ersoy M. 3.Durak",
+    "lat": 39.43560382155488,
+    "lng": 29.94267323329363
+  },
+  {
+    "name": "Mehmet Akif Ersoy M. 4.Durak",
+    "lat": 39.43625815110287,
+    "lng": 29.94235008491364
+  },
+  {
+    "name": "Mehmet Akif Ersoy M. 5.Durak",
+    "lat": 39.43573472818731,
+    "lng": 29.94232620413553
+  },
+  {
+    "name": "Mehmet Akif Ersoy M. 6.Durak",
+    "lat": 39.43373336117227,
+    "lng": 29.94339014305831
+  },
+  {
+    "name": "Mehmet Akif Ersoy M. 7.Durak",
+    "lat": 39.43189255874776,
+    "lng": 29.9448087094943
+  },
+  {
+    "name": "Mehmet Akif Ersoy M. 8.Durak",
+    "lat": 39.4317712880075,
+    "lng": 29.94675010747176
+  },
+  {
+    "name": "Mehmet Akif Ersoy M. 9.Durak",
+    "lat": 39.43181686694894,
+    "lng": 29.94848717275256
+  },
+  {
+    "name": "Mehmet Akif Ersoy Mah. 1.Durak",
+    "lat": 39.43220052811328,
+    "lng": 29.9444211623614
+  },
+  {
+    "name": "Mehmet Akif Ersoy Mah. 2.Durak",
+    "lat": 39.43394674766392,
+    "lng": 29.94353423578131
+  },
+  {
+    "name": "Mehmet Akif Ersoy Mah. 3.Durak",
+    "lat": 39.43560382155488,
+    "lng": 29.94267323329363
+  },
+  {
+    "name": "Mehmet Akif Ersoy Mah. 4.Durak",
+    "lat": 39.43625815110287,
+    "lng": 29.94235008491364
+  },
+  {
+    "name": "Mehmet Akif Ersoy Mah. 5.Durak",
+    "lat": 39.43573472818731,
+    "lng": 29.94232620413553
+  },
+  {
+    "name": "Mehmet Akif Ersoy Mah. 6.Durak",
+    "lat": 39.43373336117227,
+    "lng": 29.94339014305831
+  },
+  {
+    "name": "Mehmet Akif Ersoy Mah. 7.Durak",
+    "lat": 39.43189255874776,
+    "lng": 29.9448087094943
+  },
+  {
+    "name": "Mehmet Akif Ersoy Mah. 8.Durak",
+    "lat": 39.4317712880075,
+    "lng": 29.94675010747176
+  },
+  {
+    "name": "Mehmet Akif Ersoy Mah. 9.Durak",
+    "lat": 39.43181686694894,
+    "lng": 29.94848717275256
+  },
+  {
+    "name": "Mehmet Akif Ersoy Son Durak",
+    "lat": 39.43472382041214,
+    "lng": 29.93074941014675
+  },
+  {
+    "name": "Mekke Cami Durağı",
+    "lat": 39.4072264099115,
+    "lng": 30.01794337479881
+  },
+  {
+    "name": "Menderes Cad. Işıklar Durağı",
+    "lat": 39.42243003151478,
+    "lng": 29.98061975437188
+  },
+  {
+    "name": "Menderes Caddesi 1.durak",
+    "lat": 39.42124605540341,
+    "lng": 29.98322901697954
+  },
+  {
+    "name": "Menderes Caddesi 2.Durak",
+    "lat": 39.42380143358877,
+    "lng": 29.97733341020258
+  },
+  {
+    "name": "Menderes Caddesi 3.Durak",
+    "lat": 39.42495585062366,
+    "lng": 29.97479565907822
+  },
+  {
+    "name": "Menderes Caddesi 4.Durak",
+    "lat": 39.42583136635523,
+    "lng": 29.97206742733979
+  },
+  {
+    "name": "Menderes Caddesi 5.Durak",
+    "lat": 39.42610163155894,
+    "lng": 29.9710369799355
+  },
+  {
+    "name": "Menderes Caddesi 6.Durak",
+    "lat": 39.42475966256566,
+    "lng": 29.97454312622751
+  },
+  {
+    "name": "Menderes Caddesi 7.Durak",
+    "lat": 39.42365109207098,
+    "lng": 29.97715596322361
+  },
+  {
+    "name": "Menderes Caddesi 8.Durak",
+    "lat": 39.42213040369897,
+    "lng": 29.98071151305297
+  },
+  {
+    "name": "Menderes Caddesi 9.Durak",
+    "lat": 39.42099462739296,
+    "lng": 29.98325692476995
+  },
+  {
+    "name": "Menderes Caddesi Işıklar Durağı",
+    "lat": 39.42243003151478,
+    "lng": 29.98061975437188
+  },
+  {
+    "name": "Milli Eğitim 1.Durak",
+    "lat": 39.42148763966107,
+    "lng": 29.9948805372188
+  },
+  {
+    "name": "Milli Eğitim 2.Durak",
+    "lat": 39.42142099058669,
+    "lng": 29.99454062414161
+  },
+  {
+    "name": "Milli Eğitim 3.Durak",
+    "lat": 39.41981340585307,
+    "lng": 29.99619915532799
+  },
+  {
+    "name": "Milli Eğitim 3.Durağı",
+    "lat": 39.41981340585307,
+    "lng": 29.99619915532799
+  },
+  {
+    "name": "Milli Eğitim 4.Durak",
+    "lat": 39.41997381105991,
+    "lng": 29.99606477483003
+  },
+  {
+    "name": "Mithatpasa Cad. 2.Durak",
+    "lat": 39.4215763871788,
+    "lng": 29.98544989002691
+  },
+  {
+    "name": "Necmettin Erbakan L. 1.Durak",
+    "lat": 39.4228136011244,
+    "lng": 30.00098049346848
+  },
+  {
+    "name": "Necmettin Erbakan L. 2.Durak",
+    "lat": 39.42278730606839,
+    "lng": 30.0008310003265
+  },
+  {
+    "name": "Nizamiye Cami 2. Durak",
+    "lat": 39.40933548711533,
+    "lng": 30.00914971315116
+  },
+  {
+    "name": "Nurhak Camii 1.Durak",
+    "lat": 39.42656530792525,
+    "lng": 29.97368828111572
+  },
+  {
+    "name": "Nurhak Camii 2.Durak",
+    "lat": 39.42667274684618,
+    "lng": 29.97365882038437
+  },
+  {
+    "name": "Ok Meydanı 1.Durak",
+    "lat": 39.42081501687876,
+    "lng": 29.96146044083837
+  },
+  {
+    "name": "Ok Meydanı 10.Durak",
+    "lat": 39.41790017135336,
+    "lng": 29.95215985832833
+  },
+  {
+    "name": "Ok Meydanı 11.Durak",
+    "lat": 39.4179388485306,
+    "lng": 29.95205428634504
+  },
+  {
+    "name": "Ok Meydanı 12.Durak",
+    "lat": 39.41883393015202,
+    "lng": 29.95072816022283
+  },
+  {
+    "name": "Ok Meydanı 13.Durak",
+    "lat": 39.41891290263415,
+    "lng": 29.95064106578845
+  },
+  {
+    "name": "Ok Meydanı 14.Durak",
+    "lat": 39.41922171636553,
+    "lng": 29.94964864361614
+  },
+  {
+    "name": "Ok Meydanı 15.Durak",
+    "lat": 39.42304851518658,
+    "lng": 29.95797769651647
+  },
+  {
+    "name": "Ok Meydanı 16.Durak",
+    "lat": 39.42303353678889,
+    "lng": 29.95773763665377
+  },
+  {
+    "name": "Ok Meydanı 2.Durak",
+    "lat": 39.42119605087826,
+    "lng": 29.95856850605995
+  },
+  {
+    "name": "Ok Meydanı 3.Durak",
+    "lat": 39.4210583759451,
+    "lng": 29.95851649644641
+  },
+  {
+    "name": "Ok Meydanı 4.Durak",
+    "lat": 39.41996710667434,
+    "lng": 29.95887521426113
+  },
+  {
+    "name": "Ok Meydanı 5.Durak",
+    "lat": 39.42009966840637,
+    "lng": 29.95900969164024
+  },
+  {
+    "name": "Ok Meydanı 6.Durak",
+    "lat": 39.41903112497064,
+    "lng": 29.95813611985161
+  },
+  {
+    "name": "Ok Meydanı 7.Durak",
+    "lat": 39.41890208892823,
+    "lng": 29.9581052877568
+  },
+  {
+    "name": "Ok Meydanı 8.Durak",
+    "lat": 39.41863256161098,
+    "lng": 29.95546801751615
+  },
+  {
+    "name": "Ok Meydanı 9.Durak",
+    "lat": 39.41865989445351,
+    "lng": 29.9551979510075
+  },
+  {
+    "name": "Okçu Mah. 1.Durak",
+    "lat": 39.43843826162642,
+    "lng": 29.91045065353653
+  },
+  {
+    "name": "Okçu Mah. 2.Durak",
+    "lat": 39.44000568618305,
+    "lng": 29.91014221816571
+  },
+  {
+    "name": "Okçu Mah. 3.Durak",
+    "lat": 39.44092756391418,
+    "lng": 29.91031126530828
+  },
+  {
+    "name": "Okçu Mah. 4.Durak",
+    "lat": 39.44109092093171,
+    "lng": 29.9102323263909
+  },
+  {
+    "name": "Okçu Mah. 5.Durak",
+    "lat": 39.43990586062677,
+    "lng": 29.91007317259491
+  },
+  {
+    "name": "Okçu Mah. 6.Durak",
+    "lat": 39.43862361820088,
+    "lng": 29.91025207388155
+  },
+  {
+    "name": "Organize Sanayi 1.Durak",
+    "lat": 39.39018924716234,
+    "lng": 30.11927506039268
+  },
+  {
+    "name": "Organize Sanayi 2.Durak",
+    "lat": 39.38829638069798,
+    "lng": 30.12090226521608
+  },
+  {
+    "name": "Organize Sanayi 3.Durak",
+    "lat": 39.39217154834338,
+    "lng": 30.12450246332075
+  },
+  {
+    "name": "Organize Sanayi 4.Durak",
+    "lat": 39.39046736008545,
+    "lng": 30.11934684695716
+  },
+  {
+    "name": "Organize Sanayi 5.Durak",
+    "lat": 39.38994263060025,
+    "lng": 30.11602004013436
+  },
+  {
+    "name": "Orman Bölge Müdürlüğü Durağı",
+    "lat": 39.38317555645177,
+    "lng": 30.04312523055323
+  },
+  {
+    "name": "Osmangazi Mah. 1.Durak",
+    "lat": 39.43105248524267,
+    "lng": 29.9670776798464
+  },
+  {
+    "name": "Osmangazi Mah. 6.Durak",
+    "lat": 39.43764439010286,
+    "lng": 29.96289278077025
+  },
+  {
+    "name": "Osmangazi Mah. 7.Durak",
+    "lat": 39.43390206625945,
+    "lng": 29.96753181434246
+  },
+  {
+    "name": "Osmangazi Mah. 8.Durak",
+    "lat": 39.43395698227178,
+    "lng": 29.9676541238142
+  },
+  {
+    "name": "Osmanlı Caddesi 1.Durak",
+    "lat": 39.42185935194637,
+    "lng": 29.9799467776968
+  },
+  {
+    "name": "Osmanlı Caddesi 2.Durak",
+    "lat": 39.41991012097124,
+    "lng": 29.97848981086924
+  },
+  {
+    "name": "Osmanlı Caddesi 3.Durak",
+    "lat": 39.41776084155055,
+    "lng": 29.97692022261572
+  },
+  {
+    "name": "Otogar 1.Durak",
+    "lat": 39.4428567373317,
+    "lng": 30.00614455341011
+  },
+  {
+    "name": "Otogar 2.Durak",
+    "lat": 39.44337930692748,
+    "lng": 30.00704669834811
+  },
+  {
+    "name": "Parkhayat Has. 1. Durak",
+    "lat": 39.39533944014661,
+    "lng": 30.02874977428696
+  },
+  {
+    "name": "Parkhayat Has. 2. Durak",
+    "lat": 39.39538601968138,
+    "lng": 30.02819019789245
+  },
+  {
+    "name": "Parmakören Mah. 1.Durak",
+    "lat": 39.45259180784277,
+    "lng": 29.96307700309152
+  },
+  {
+    "name": "Parmakören Mah. 10.Durak",
+    "lat": 39.46795666970137,
+    "lng": 29.95826386679451
+  },
+  {
+    "name": "Parmakören Mah. 11.Durak",
+    "lat": 39.46519901912612,
+    "lng": 29.95854046546739
+  },
+  {
+    "name": "Parmakören Mah. 12.Durak",
+    "lat": 39.46421722193917,
+    "lng": 29.95723180495809
+  },
+  {
+    "name": "Parmakören Mah. 13.Durak",
+    "lat": 39.46194579604467,
+    "lng": 29.95766363286038
+  },
+  {
+    "name": "Parmakören Mah. 14.Durak",
+    "lat": 39.45973041870479,
+    "lng": 29.95746100123196
+  },
+  {
+    "name": "Parmakören Mah. 2.Durak",
+    "lat": 39.45281040401684,
+    "lng": 29.96306145628044
+  },
+  {
+    "name": "Parmakören Mah. 3.Durak",
+    "lat": 39.45338717483155,
+    "lng": 29.96254570867304
+  },
+  {
+    "name": "Parmakören Mah. 4.Durak",
+    "lat": 39.45730205346751,
+    "lng": 29.96047262055941
+  },
+  {
+    "name": "Parmakören Mah. 5.Durak",
+    "lat": 39.45878573936992,
+    "lng": 29.95908963645748
+  },
+  {
+    "name": "Parmakören Mah. 6.Durak",
+    "lat": 39.46004894714358,
+    "lng": 29.95752235785464
+  },
+  {
+    "name": "Parmakören Mah. 9.Durak",
+    "lat": 39.46813153528526,
+    "lng": 29.95828526543566
+  },
+  {
+    "name": "Paşam Sultan Durağı",
+    "lat": 39.4182243093282,
+    "lng": 29.97532298918389
+  },
+  {
+    "name": "Perli Mah. 10.Durak",
+    "lat": 39.43875820088325,
+    "lng": 30.03855902702903
+  },
+  {
+    "name": "Perli Mah. 11.Durak",
+    "lat": 39.43749110223616,
+    "lng": 30.03313396978229
+  },
+  {
+    "name": "Perli Mah. 12.Durak",
+    "lat": 39.4368647830204,
+    "lng": 30.028998127823
+  },
+  {
+    "name": "Perli Mah. 13.Durak",
+    "lat": 39.43663456136203,
+    "lng": 30.02728522854001
+  },
+  {
+    "name": "Perli Mah. 2.Durak",
+    "lat": 39.43939021053126,
+    "lng": 30.03849751442545
+  },
+  {
+    "name": "Perli Mah. 4.Durak",
+    "lat": 39.44071701049302,
+    "lng": 30.03955515567229
+  },
+  {
+    "name": "Perli Mah. 5.Durak",
+    "lat": 39.44099321886952,
+    "lng": 30.04143763653872
+  },
+  {
+    "name": "Perli Mah. 6.Durak",
+    "lat": 39.44084199182026,
+    "lng": 30.04299899642987
+  },
+  {
+    "name": "Perli Mah. 7.Durak",
+    "lat": 39.44204072240301,
+    "lng": 30.04525277538723
+  },
+  {
+    "name": "Perli Mah. 8.Durak",
+    "lat": 39.44093788425559,
+    "lng": 30.04296600595033
+  },
+  {
+    "name": "Perşembe pazarı 1.Durak",
+    "lat": 39.41321455460324,
+    "lng": 29.99886680012609
+  },
+  {
+    "name": "Perşembe pazarı 2.Durak",
+    "lat": 39.41323899676851,
+    "lng": 29.99850885143135
+  },
+  {
+    "name": "Saat Kulesi Durağı",
+    "lat": 39.41891625526335,
+    "lng": 29.98730258117148
+  },
+  {
+    "name": "Salı Pazarı 2.Durağı",
+    "lat": 39.40251930783134,
+    "lng": 30.01745357560571
+  },
+  {
+    "name": "Salı Pazarı Durağı",
+    "lat": 39.40251037771993,
+    "lng": 30.01772462020497
+  },
+  {
+    "name": "Sazak Son Durak",
+    "lat": 39.40494870549635,
+    "lng": 29.98216614712485
+  },
+  {
+    "name": "Selimiye Cami 2.Durağı",
+    "lat": 39.39922824748548,
+    "lng": 30.02321370894233
+  },
+  {
+    "name": "Selimiye Cami Durağı",
+    "lat": 39.3993914388835,
+    "lng": 30.02311340000069
+  },
+  {
+    "name": "Sera Avm Durağı",
+    "lat": 39.43407051201591,
+    "lng": 29.99725250441047
+  },
+  {
+    "name": "Siner Mah. 1. Durak",
+    "lat": 39.39066167011528,
+    "lng": 30.0674883391652
+  },
+  {
+    "name": "Siner Mah. 2. Durak",
+    "lat": 39.39732788091078,
+    "lng": 30.07340904492084
+  },
+  {
+    "name": "Siner Mah. 3. Durak",
+    "lat": 39.39233277133184,
+    "lng": 30.07275472252472
+  },
+  {
+    "name": "Siner Mah. 4. Durak",
+    "lat": 39.39038360812638,
+    "lng": 30.06737122290707
+  },
+  {
+    "name": "Sofu Mah. 1.Durak",
+    "lat": 39.44955309091164,
+    "lng": 29.89787285349783
+  },
+  {
+    "name": "Sofu Mah. 2.Durak",
+    "lat": 39.44981335537774,
+    "lng": 29.89650977412679
+  },
+  {
+    "name": "Sofu Mah. 3.Durak",
+    "lat": 39.45001140424161,
+    "lng": 29.89463383706057
+  },
+  {
+    "name": "Sofu Mah. 4.Durak",
+    "lat": 39.45151643826694,
+    "lng": 29.89085873583786
+  },
+  {
+    "name": "Sofu Mah. 5.Durak",
+    "lat": 39.45142296011993,
+    "lng": 29.89082867961564
+  },
+  {
+    "name": "Sofu Mah. 6.Durak",
+    "lat": 39.44994151767975,
+    "lng": 29.89460407429467
+  },
+  {
+    "name": "Sofu Mah. 7.Durak",
+    "lat": 39.44974532031486,
+    "lng": 29.89638905512618
+  },
+  {
+    "name": "Sofu Mah. 8.Durak",
+    "lat": 39.44932568474934,
+    "lng": 29.89801075154543
+  },
+  {
+    "name": "SSK Durağı",
+    "lat": 39.4271019718968,
+    "lng": 29.96878523215476
+  },
+  {
+    "name": "Sultanbağı Mah. 1.Durak",
+    "lat": 39.41509939903863,
+    "lng": 29.97141908948873
+  },
+  {
+    "name": "Sultanbağı Mah. 2.Durak",
+    "lat": 39.41499051539758,
+    "lng": 29.97143985665208
+  },
+  {
+    "name": "Sultanbağı Mah. 3.Durak",
+    "lat": 39.41638949108273,
+    "lng": 29.96651445413319
+  },
+  {
+    "name": "Sultanbağı Mah. 4.Durak",
+    "lat": 39.41640248062789,
+    "lng": 29.96626330518941
+  },
+  {
+    "name": "Sultanbağı Mah. 5.Durak",
+    "lat": 39.41742301461633,
+    "lng": 29.96464086802215
+  },
+  {
+    "name": "Sultanbağı Mah. 6.Durak",
+    "lat": 39.41832507855938,
+    "lng": 29.96289046811149
+  },
+  {
+    "name": "Sultanbağı Mah. 7.Durak",
+    "lat": 39.41944643968151,
+    "lng": 29.96438683637268
+  },
+  {
+    "name": "Söğütlü Çeşme 1.Durak",
+    "lat": 39.41656642858423,
+    "lng": 29.99521342825666
+  },
+  {
+    "name": "Söğütlü Çeşme 2.Durak",
+    "lat": 39.4167648634073,
+    "lng": 29.994858289875
+  },
+  {
+    "name": "Söğütlü Çeşme1.Durak",
+    "lat": 39.41656642858423,
+    "lng": 29.99521342825666
+  },
+  {
+    "name": "SöğütlüÇeşme2.durak",
+    "lat": 39.4167648634073,
+    "lng": 29.994858289875
+  },
+  {
+    "name": "Tarim İl Müdürlügü 1. Durak",
+    "lat": 39.42787741208415,
+    "lng": 29.96486247577033
+  },
+  {
+    "name": "Tarim İl Müdürlügü 2. Durak",
+    "lat": 39.42744400599285,
+    "lng": 29.96565780130251
+  },
+  {
+    "name": "Toki Aile Sağlığı Mer. Durak",
+    "lat": 39.45335740847379,
+    "lng": 29.98444785285013
+  },
+  {
+    "name": "Toki Aile Sağlığı Merkezi Durak",
+    "lat": 39.45335740847379,
+    "lng": 29.98444785285013
+  },
+  {
+    "name": "Toki Sanayi Kavşağı 1.Durak",
+    "lat": 39.43766962694911,
+    "lng": 29.97576315152743
+  },
+  {
+    "name": "Toki Sanayi Kavşağı 2.Durak",
+    "lat": 39.43776728217121,
+    "lng": 29.97589138450367
+  },
+  {
+    "name": "Tren Garı Karşı Durağı",
+    "lat": 39.42003341821803,
+    "lng": 29.99855683242586
+  },
+  {
+    "name": "Tugay 1. Durak",
+    "lat": 39.41807338786805,
+    "lng": 30.00593421229714
+  },
+  {
+    "name": "Tugay 2. Durak",
+    "lat": 39.41811252542292,
+    "lng": 30.00557228369915
+  },
+  {
+    "name": "Turgut Özal İlkokulu Durağı",
+    "lat": 39.45871692062488,
+    "lng": 29.97516457035184
+  },
+  {
+    "name": "Ulu Cami 1.Durak",
+    "lat": 39.41702431591168,
+    "lng": 29.97621702037359
+  },
+  {
+    "name": "Ulu Cami 2.Durak",
+    "lat": 39.41686756893085,
+    "lng": 29.97633668351637
+  },
+  {
+    "name": "Vali Konağı 1.Durak",
+    "lat": 39.40564732242607,
+    "lng": 30.01195950902669
+  },
+  {
+    "name": "Vali Konağı 2.Durak",
+    "lat": 39.40546057608917,
+    "lng": 30.0117902419138
+  },
+  {
+    "name": "Vatan Market Durağı",
+    "lat": 39.4229880159367,
+    "lng": 29.97830002111588
+  },
+  {
+    "name": "Vefa Fethi Güzen Durağı",
+    "lat": 39.41967728935375,
+    "lng": 30.00187002125054
+  },
+  {
+    "name": "Vefa Mah. 1.Durak",
+    "lat": 39.41907011116397,
+    "lng": 30.00278986988673
+  },
+  {
+    "name": "Vefa Mah. 2.Durak",
+    "lat": 39.42478089024201,
+    "lng": 30.00223163627469
+  },
+  {
+    "name": "Vefa Mah. 3.Durak",
+    "lat": 39.42518705306829,
+    "lng": 30.00317681586797
+  },
+  {
+    "name": "Vefa Mah. 4.Durak",
+    "lat": 39.42522308774771,
+    "lng": 30.00304198873833
+  },
+  {
+    "name": "Vefa Mah. 5.Durak",
+    "lat": 39.42578299684266,
+    "lng": 30.00477597981508
+  },
+  {
+    "name": "Vefa Mah. 6.Durak",
+    "lat": 39.42581284537751,
+    "lng": 30.0046442063683
+  },
+  {
+    "name": "Vefa Psikiyatri 1. Durak",
+    "lat": 39.41621182980864,
+    "lng": 30.01129798423618
+  },
+  {
+    "name": "Vefa Psikiyatri 2. Durak",
+    "lat": 39.41620067862035,
+    "lng": 30.01103934477342
+  },
+  {
+    "name": "Vefa Sümerbank Durağı",
+    "lat": 39.4239484139237,
+    "lng": 30.00110941746674
+  },
+  {
+    "name": "Vefa Üstgeçit Durağı",
+    "lat": 39.41829879566995,
+    "lng": 30.00031255068472
+  },
+  {
+    "name": "Yavuz Sultan Selim Cami Durak",
+    "lat": 39.45094950107294,
+    "lng": 29.94066497077743
+  },
+  {
+    "name": "Yedigöller 1. Durak",
+    "lat": 39.43910007056463,
+    "lng": 29.9724104494353
+  },
+  {
+    "name": "Yedigöller 2. Durak",
+    "lat": 39.43897525965185,
+    "lng": 29.97240698717358
+  },
+  {
+    "name": "Yeni Adliye Durağı",
+    "lat": 39.4350481696455,
+    "lng": 29.99263532721671
+  },
+  {
+    "name": "Yeni Belediye Durağı",
+    "lat": 39.42534355192741,
+    "lng": 29.99004959674177
+  },
+  {
+    "name": "Yeni Belediye Karşı Durağı",
+    "lat": 39.4261458462032,
+    "lng": 29.99107233192138
+  },
+  {
+    "name": "Yenibosna Mah. 1.Durak",
+    "lat": 39.46228573113504,
+    "lng": 30.03106980513556
+  },
+  {
+    "name": "Yenibosna Mah. 2.Durak",
+    "lat": 39.46512158403534,
+    "lng": 30.03166029019967
+  },
+  {
+    "name": "Yenibosna Mah. 3.Durak",
+    "lat": 39.4621692953524,
+    "lng": 30.03106655327332
+  },
+  {
+    "name": "Yenibosna Mah. 4.Durak",
+    "lat": 39.46072635957248,
+    "lng": 30.0321092282399
+  },
+  {
+    "name": "Yenibosna Mah. 5.Durak",
+    "lat": 39.45938245276045,
+    "lng": 30.03313308382529
+  },
+  {
+    "name": "Yenidoğan Mah.  3.Durak",
+    "lat": 39.39948715763271,
+    "lng": 30.02108402908759
+  },
+  {
+    "name": "Yenidoğan Mah.  4.Durak",
+    "lat": 39.40411629153766,
+    "lng": 30.01369764327393
+  },
+  {
+    "name": "Yenidoğan Mah.  5.Durak",
+    "lat": 39.40635957122957,
+    "lng": 30.01166944061005
+  },
+  {
+    "name": "Yenidoğan Mah.  6.Durak",
+    "lat": 39.40105232029458,
+    "lng": 30.02006739987182
+  },
+  {
+    "name": "Yenidoğan Mah.  7.Durak",
+    "lat": 39.40602235407967,
+    "lng": 30.02188933124193
+  },
+  {
+    "name": "Yenidoğan Mah. 1.Durak",
+    "lat": 39.40644210334266,
+    "lng": 30.01173362583327
+  },
+  {
+    "name": "Yenidoğan Mah. 2.Durak",
+    "lat": 39.39890582714374,
+    "lng": 30.02329522353038
+  },
+  {
+    "name": "Yesil Bahçe 1.Durak",
+    "lat": 39.44165622598689,
+    "lng": 29.98163687249613
+  },
+  {
+    "name": "Yesil Bahçe 2.Durak",
+    "lat": 39.44163921916341,
+    "lng": 29.98201361604325
+  },
+  {
+    "name": "Yoncalı FTR Hastane. 1.Durak",
+    "lat": 39.49387321840539,
+    "lng": 29.83887237812749
+  },
+  {
+    "name": "Yoncalı FTR Hastane. 2.Durak",
+    "lat": 39.49384684868068,
+    "lng": 29.83857886673496
+  },
+  {
+    "name": "Yoncalı Jandarma K.K Durağı",
+    "lat": 39.49270211668053,
+    "lng": 29.84190069763079
+  },
+  {
+    "name": "Yoncalı Mah. 1.Durak",
+    "lat": 39.49556373127254,
+    "lng": 29.83289650689631
+  },
+  {
+    "name": "Yoncalı Mah. 2.Durak",
+    "lat": 39.48765225201929,
+    "lng": 29.83967995096928
+  },
+  {
+    "name": "Yoncalı Mesleki Lise 1.Durak",
+    "lat": 39.48560729558516,
+    "lng": 29.83887050272439
+  },
+  {
+    "name": "Yoncalı Mesleki Lise 2.Durak",
+    "lat": 39.48475348055968,
+    "lng": 29.8377397133324
+  },
+  {
+    "name": "Yoncalı Osmanlı Hamam 1.Durak",
+    "lat": 39.49475397721434,
+    "lng": 29.83552830629971
+  },
+  {
+    "name": "Yoncalı Osmanlı Hamam 2.Durak",
+    "lat": 39.49464003763916,
+    "lng": 29.83542299364401
+  },
+  {
+    "name": "Yoncalı Son Durak",
+    "lat": 39.49353827692364,
+    "lng": 29.82964765725956
+  },
+  {
+    "name": "Yoncalı Yeni FTR Has. 1.Durak",
+    "lat": 39.49993471612174,
+    "lng": 29.82820129634586
+  },
+  {
+    "name": "Yoncalı Yeni FTR Has. 2.Durak",
+    "lat": 39.49997618839313,
+    "lng": 29.82806154527605
+  },
+  {
+    "name": "Yoncalı Çiftlik Durağı",
+    "lat": 39.48184637363449,
+    "lng": 29.83668658292912
+  },
+  {
+    "name": "Yunusemre Mah. 1. Durak",
+    "lat": 39.40545657979774,
+    "lng": 30.02473021524451
+  },
+  {
+    "name": "Yunusemre Mah. 10. Durak",
+    "lat": 39.3993736642191,
+    "lng": 30.02823590110054
+  },
+  {
+    "name": "Yunusemre Mah. 11. Durak",
+    "lat": 39.40149887382957,
+    "lng": 30.02931975816198
+  },
+  {
+    "name": "Yunusemre Mah. 12. Durak",
+    "lat": 39.40315868685033,
+    "lng": 30.02915101332158
+  },
+  {
+    "name": "Yunusemre Mah. 13. Durak",
+    "lat": 39.40362959130577,
+    "lng": 30.02644756053886
+  },
+  {
+    "name": "Yunusemre Mah. 14. Durak",
+    "lat": 39.40168942047356,
+    "lng": 30.02529858130273
+  },
+  {
+    "name": "Yunusemre Mah. 15. Durak",
+    "lat": 39.40526752651748,
+    "lng": 30.02475587235952
+  },
+  {
+    "name": "Yunusemre Mah. 16. Durak",
+    "lat": 39.4048407839439,
+    "lng": 30.02636450064263
+  },
+  {
+    "name": "Yunusemre Mah. 17. Durak",
+    "lat": 39.39845849637091,
+    "lng": 30.02497769632399
+  },
+  {
+    "name": "Yunusemre Mah. 18. Durak",
+    "lat": 39.39741529917326,
+    "lng": 30.02679439883539
+  },
+  {
+    "name": "Yunusemre Mah. 19 Durak",
+    "lat": 39.39642940272464,
+    "lng": 30.02884188772508
+  },
+  {
+    "name": "Yunusemre Mah. 2. Durak",
+    "lat": 39.40652464926811,
+    "lng": 30.02078213381397
+  },
+  {
+    "name": "Yunusemre Mah. 20. Durak",
+    "lat": 39.39555149101243,
+    "lng": 30.02952196420952
+  },
+  {
+    "name": "Yunusemre Mah. 3. Durak",
+    "lat": 39.40887808581341,
+    "lng": 30.01909888523212
+  },
+  {
+    "name": "Yunusemre Mah. 4. Durak",
+    "lat": 39.3943127319269,
+    "lng": 30.03207044461685
+  },
+  {
+    "name": "Yunusemre Mah. 5. Durak",
+    "lat": 39.39532240734957,
+    "lng": 30.03100292286092
+  },
+  {
+    "name": "Yunusemre Mah. 6. Durak",
+    "lat": 39.39641086488943,
+    "lng": 30.02900591935922
+  },
+  {
+    "name": "Yunusemre Mah. 7. Durak",
+    "lat": 39.39721887780751,
+    "lng": 30.02752385381559
+  },
+  {
+    "name": "Yunusemre Mah. 8. Durak",
+    "lat": 39.39847247246115,
+    "lng": 30.02522531902638
+  },
+  {
+    "name": "Yunusemre Mah. 9. Durak",
+    "lat": 39.40124124157653,
+    "lng": 30.01992403266412
+  },
+  {
+    "name": "Yıldırım Beyazıt Mah. 1.Durak",
+    "lat": 39.42221035420224,
+    "lng": 29.99791357418052
+  },
+  {
+    "name": "Yıldırım Beyazıt Mah. 2.Durak",
+    "lat": 39.42219849218455,
+    "lng": 29.99783310697425
+  },
+  {
+    "name": "Yıldırım Beyazıt Mah. 3.Durak",
+    "lat": 39.42351023289732,
+    "lng": 29.99558221098535
+  },
+  {
+    "name": "Yıldırım Beyazıt Mah. 4.Durak",
+    "lat": 39.42343280305994,
+    "lng": 29.99554976001344
+  },
+  {
+    "name": "Zafer Camii 1.Durak",
+    "lat": 39.42365057879037,
+    "lng": 29.96646940837808
+  },
+  {
+    "name": "Zafer Camii 2.Durak",
+    "lat": 39.4229027719029,
+    "lng": 29.96659483584836
+  },
+  {
+    "name": "Zafertepe 1. Durak",
+    "lat": 39.38805242885604,
+    "lng": 30.05112070196461
+  },
+  {
+    "name": "Zafertepe 10. Durak",
+    "lat": 39.38534106708154,
+    "lng": 30.04468038914323
+  },
+  {
+    "name": "Zafertepe 11. Durak",
+    "lat": 39.38925889934684,
+    "lng": 30.04503040678512
+  },
+  {
+    "name": "Zafertepe 14. Durak",
+    "lat": 39.38380165369554,
+    "lng": 30.05265651365169
+  },
+  {
+    "name": "Zafertepe 15. Durak",
+    "lat": 39.38323520932487,
+    "lng": 30.05083644832913
+  },
+  {
+    "name": "Zafertepe 16. Durak",
+    "lat": 39.38506215471152,
+    "lng": 30.04809394783276
+  },
+  {
+    "name": "Zafertepe 17. Durak(Güzel Sanatlar Lisesi)",
+    "lat": 39.38692206270199,
+    "lng": 30.04065102721357
+  },
+  {
+    "name": "Zafertepe 18. Durak",
+    "lat": 39.38463911661132,
+    "lng": 30.04528558287997
+  },
+  {
+    "name": "Zafertepe 19. Durak",
+    "lat": 39.38567221978427,
+    "lng": 30.0468719068583
+  },
+  {
+    "name": "Zafertepe 2. Durak",
+    "lat": 39.38678545217876,
+    "lng": 30.0486137174264
+  },
+  {
+    "name": "Zafertepe 20. Durak",
+    "lat": 39.38665384262701,
+    "lng": 30.04872077623045
+  },
+  {
+    "name": "Zafertepe 21. Durak",
+    "lat": 39.38794692997528,
+    "lng": 30.05139044889566
+  },
+  {
+    "name": "Zafertepe 22. Durak",
+    "lat": 39.38643707665777,
+    "lng": 30.0466011097247
+  },
+  {
+    "name": "Zafertepe 23. Durak",
+    "lat": 39.38534884955337,
+    "lng": 30.04489892521725
+  },
+  {
+    "name": "Zafertepe 24. Durak",
+    "lat": 39.38953249948494,
+    "lng": 30.04500738921558
+  },
+  {
+    "name": "Zafertepe 25. Durak",
+    "lat": 39.38762951446233,
+    "lng": 30.04494777214417
+  },
+  {
+    "name": "Zafertepe 26. Durak",
+    "lat": 39.38740898343148,
+    "lng": 30.046927922879
+  },
+  {
+    "name": "Zafertepe 27. Durak",
+    "lat": 39.38693903956589,
+    "lng": 30.04757392980061
+  },
+  {
+    "name": "Zafertepe 28. Durak",
+    "lat": 39.38842714438828,
+    "lng": 30.05046021758883
+  },
+  {
+    "name": "Zafertepe 29. Durak",
+    "lat": 39.38921171533499,
+    "lng": 30.04847165133859
+  },
+  {
+    "name": "Zafertepe 3. Durak",
+    "lat": 39.38539886570908,
+    "lng": 30.04614515491596
+  },
+  {
+    "name": "Zafertepe 30. Durak",
+    "lat": 39.39024409248582,
+    "lng": 30.05049472418899
+  },
+  {
+    "name": "Zafertepe 31. Durak",
+    "lat": 39.38502850236735,
+    "lng": 30.04802127387921
+  },
+  {
+    "name": "Zafertepe 32. Durak",
+    "lat": 39.38322338880359,
+    "lng": 30.05108072085697
+  },
+  {
+    "name": "Zafertepe 33. Durak",
+    "lat": 39.38367194724269,
+    "lng": 30.05254446542752
+  },
+  {
+    "name": "Zafertepe 36. Durak",
+    "lat": 39.38497238820229,
+    "lng": 30.05669658026477
+  },
+  {
+    "name": "Zafertepe 37. Durak",
+    "lat": 39.3842210660646,
+    "lng": 30.06095234957885
+  },
+  {
+    "name": "Zafertepe 38. Durak",
+    "lat": 39.38958802473283,
+    "lng": 30.06015815616701
+  },
+  {
+    "name": "Zafertepe 4. Durak",
+    "lat": 39.38473887764432,
+    "lng": 30.04426990090792
+  },
+  {
+    "name": "Zafertepe 5. Durak",
+    "lat": 39.38714614488402,
+    "lng": 30.04060672742823
+  },
+  {
+    "name": "Zafertepe 6. Durak",
+    "lat": 39.39050223726571,
+    "lng": 30.05072764633374
+  },
+  {
+    "name": "Zafertepe 7. Durak",
+    "lat": 39.38910339912681,
+    "lng": 30.0484388253654
+  },
+  {
+    "name": "Zafertepe 8. Durak",
+    "lat": 39.38742666868865,
+    "lng": 30.04672720000331
+  },
+  {
+    "name": "Zafertepe 9. Durak",
+    "lat": 39.38771334255848,
+    "lng": 30.04484326796254
+  },
+  {
+    "name": "Zafertepe Anadurak",
+    "lat": 39.389125882433,
+    "lng": 30.054001413371
+  },
+  {
+    "name": "Ziraat Mahallesi 3. Durak",
+    "lat": 39.42754893051512,
+    "lng": 29.96813953627099
+  },
+  {
+    "name": "Ziraat Mahallesi 4. Durak",
+    "lat": 39.42882571869986,
+    "lng": 29.96263643746859
+  },
+  {
+    "name": "Ziraat Mahallesi 5. Durak",
+    "lat": 39.4306674809282,
+    "lng": 29.96070268624499
+  },
+  {
+    "name": "Ziraat Mahallesi 6. Durak",
+    "lat": 39.4321234342936,
+    "lng": 29.96002794843509
+  },
+  {
+    "name": "Zığra Mah. 1. Durak",
+    "lat": 39.40786044794358,
+    "lng": 30.04368447855708
+  },
+  {
+    "name": "Zığra Mah. 2. Durak",
+    "lat": 39.40745143842413,
+    "lng": 30.04535977177038
+  },
+  {
+    "name": "Zığra Mah. 3. Durak",
+    "lat": 39.40753780396604,
+    "lng": 30.04531850748034
+  },
+  {
+    "name": "Zığra Mah. 4. Durak",
+    "lat": 39.40796602375656,
+    "lng": 30.04357463432682
+  },
+  {
+    "name": "Çalca Mah. 1.Durak",
+    "lat": 39.48030564202799,
+    "lng": 30.01983188092121
+  },
+  {
+    "name": "Çalca Mah. 2.Durak",
+    "lat": 39.4790183211542,
+    "lng": 30.02021123146951
+  },
+  {
+    "name": "Çalca Mah. 3.Durak",
+    "lat": 39.47876525878027,
+    "lng": 30.02054828095501
+  },
+  {
+    "name": "Çamlıca 1.Durak",
+    "lat": 39.4344030554868,
+    "lng": 29.92755455066979
+  },
+  {
+    "name": "Çamlıca 10.Durak",
+    "lat": 39.43432510436837,
+    "lng": 29.92745151775439
+  },
+  {
+    "name": "Çamlıca 11.Durak",
+    "lat": 39.43356158590176,
+    "lng": 29.93082380174079
+  },
+  {
+    "name": "Çamlıca 12.Durak",
+    "lat": 39.43358934093236,
+    "lng": 29.9313722564888
+  },
+  {
+    "name": "Çamlıca 13.Durak",
+    "lat": 39.43465392649875,
+    "lng": 29.9308540593218
+  },
+  {
+    "name": "Çamlıca 2.Durak",
+    "lat": 39.43488531777225,
+    "lng": 29.92590434501995
+  },
+  {
+    "name": "Çamlıca 3.Durak",
+    "lat": 39.43552033164359,
+    "lng": 29.92305431738077
+  },
+  {
+    "name": "Çamlıca 4.Durak",
+    "lat": 39.43697929818069,
+    "lng": 29.91278504819289
+  },
+  {
+    "name": "Çamlıca 5.Durak",
+    "lat": 39.43626361406393,
+    "lng": 29.91153734760715
+  },
+  {
+    "name": "Çamlıca 6.Durak",
+    "lat": 39.43611489234259,
+    "lng": 29.91156391442525
+  },
+  {
+    "name": "Çamlıca 7.Durak",
+    "lat": 39.43680568697655,
+    "lng": 29.91291024598393
+  },
+  {
+    "name": "Çamlıca 8.Durak",
+    "lat": 39.43533930338412,
+    "lng": 29.92306862335235
+  },
+  {
+    "name": "Çamlıca 9.Durak",
+    "lat": 39.43472221875687,
+    "lng": 29.92577050355311
+  },
+  {
+    "name": "Çatal Çesme 1.Durak",
+    "lat": 39.41544227790904,
+    "lng": 29.96910360028644
+  },
+  {
+    "name": "Çatal Çesme 2.Durak",
+    "lat": 39.41536264029175,
+    "lng": 29.96900402054953
+  },
+  {
+    "name": "Çevre Şeh. İklim İl M. Durağı",
+    "lat": 39.42809123852285,
+    "lng": 29.99230055713073
+  },
+  {
+    "name": "Çevre Şehircilik ve İklim İl Müdürlü Durağı",
+    "lat": 39.42809123852285,
+    "lng": 29.99230055713073
+  },
+  {
+    "name": "Çiniciler Çarşısı Durağı",
+    "lat": 39.43407684233807,
+    "lng": 29.99767208440438
+  },
+  {
+    "name": "Üniversite Yurtlar 1.Durak",
+    "lat": 39.47621051003564,
+    "lng": 29.90905345602223
+  },
+  {
+    "name": "Üniversite Yurtlar 10.Durak",
+    "lat": 39.47668065493014,
+    "lng": 29.91313990927823
+  },
+  {
+    "name": "Üniversite Yurtlar 11.Durak",
+    "lat": 39.47596423292958,
+    "lng": 29.91483286590642
+  },
+  {
+    "name": "Üniversite Yurtlar 12.Durak",
+    "lat": 39.47595005077749,
+    "lng": 29.91695155579766
+  },
+  {
+    "name": "Üniversite Yurtlar 13.Durak",
+    "lat": 39.47614517490256,
+    "lng": 29.91707623947692
+  },
+  {
+    "name": "Üniversite Yurtlar 14.Durak",
+    "lat": 39.47616096884543,
+    "lng": 29.91496120153399
+  },
+  {
+    "name": "Üniversite Yurtlar 2.Durak",
+    "lat": 39.47808761565799,
+    "lng": 29.90756225709037
+  },
+  {
+    "name": "Üniversite Yurtlar 3.Durak",
+    "lat": 39.48149982316284,
+    "lng": 29.90878899012962
+  },
+  {
+    "name": "Üniversite Yurtlar 4.Durak",
+    "lat": 39.48335358622732,
+    "lng": 29.90883889335609
+  },
+  {
+    "name": "Üniversite Yurtlar 6.Durak",
+    "lat": 39.4831237277769,
+    "lng": 29.91081253110652
+  },
+  {
+    "name": "Üniversite Yurtlar 7.Durak",
+    "lat": 39.48232957657329,
+    "lng": 29.91186832399767
+  },
+  {
+    "name": "Üniversite Yurtlar 8.Durak",
+    "lat": 39.48031337782461,
+    "lng": 29.91015257992884
+  },
+  {
+    "name": "Üniversite Yurtlar 9.Durak",
+    "lat": 39.47858375990799,
+    "lng": 29.91243300352606
+  },
+  {
+    "name": "Şair Şeyhi Dum. Mah. 1.Durak",
+    "lat": 39.45639546465463,
+    "lng": 29.93301897488764
+  },
+  {
+    "name": "Şair Şeyhi Dum. Mah. 2.Durak",
+    "lat": 39.4570984622264,
+    "lng": 29.93203931944633
+  },
+  {
+    "name": "Şair Şeyhi Dum. Mah. 3.Durak",
+    "lat": 39.45883712186459,
+    "lng": 29.93004449093734
+  },
+  {
+    "name": "Şair Şeyhi Dum. Mah. 4.Durak",
+    "lat": 39.46032393476637,
+    "lng": 29.92865865568425
+  },
+  {
+    "name": "Şair Şeyhi Dum. Mah. 5.Durak",
+    "lat": 39.46042134233915,
+    "lng": 29.92904450852135
+  },
+  {
+    "name": "Şair Şeyhi Dum. Mah. 6.Durak",
+    "lat": 39.46110875764357,
+    "lng": 29.91943370446575
+  },
+  {
+    "name": "Şair Şeyhi Dum. Mah. 7.Durak",
+    "lat": 39.46114288034302,
+    "lng": 29.91956577443285
+  },
+  {
+    "name": "Şehir Hastanesi 1.Durak",
+    "lat": 39.42680978755771,
+    "lng": 29.95996529131541
+  },
+  {
+    "name": "Şehir Hastanesi 2.Durak",
+    "lat": 39.42756996879601,
+    "lng": 29.95911066754763
+  },
+  {
+    "name": "Şehzadeler Parkı 1.Durak",
+    "lat": 39.44492475406976,
+    "lng": 29.98121469248025
+  },
+  {
+    "name": "Şehzadeler Parkı 2.Durak",
+    "lat": 39.4456969499789,
+    "lng": 29.98140943086827
+  },
+  {
+    "name": "Şeker İlkokul Durağı",
+    "lat": 39.42792419211811,
+    "lng": 29.9855826139049
+  },
+  {
+    "name": "Şelale Cami 1. Durak",
+    "lat": 39.39710572019946,
+    "lng": 30.02646024203836
+  },
+  {
+    "name": "Şelale Cami 2. Durak",
+    "lat": 39.39665843139139,
+    "lng": 30.02643550510441
+  },
+  {
+    "name": "Şengül Hamam 1.Durak",
+    "lat": 39.41590039433839,
+    "lng": 29.97397273940197
+  },
+  {
+    "name": "Şengül Hamam 2.Durak",
+    "lat": 39.41592320642863,
+    "lng": 29.97429180164293
+  },
+  {
+    "name": "Şeyh Edebali Cami Durağı",
+    "lat": 39.4534593013155,
+    "lng": 29.98436495185554
+  }
+]
