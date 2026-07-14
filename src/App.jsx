@@ -1,9 +1,10 @@
 import { useState, useMemo, useEffect, useRef } from 'react'
 import { getLocations, findRoutes, findClosestLocation, getLocationCoords } from './utils/routeFinder'
-import { MapContainer, TileLayer, Marker, Polyline, Popup, useMap, CircleMarker } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Polyline, Popup, Tooltip, useMap, CircleMarker } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet';
 import stopsData from './data/stops.json';
+import closedStops from './data/closedStops';
 
 // Custom Leaflet Pin Markers using CSS / SVG
 const createCustomMarker = (type) => {
@@ -200,6 +201,7 @@ function App() {
   const [locating, setLocating] = useState(false)
   const [errorMsg, setErrorMsg] = useState('')
   const [showStops, setShowStops] = useState(false)
+  const [showClosedStops, setShowClosedStops] = useState(false)
 
   const locations = useMemo(() => getLocations(), [])
 
@@ -310,7 +312,10 @@ function App() {
             <span>Rota Planla</span>
           </button>
 
-          <div className="stops-toggle-wrapper" style={{ marginTop: '1rem', display: 'flex', alignItems: 'center', gap: '0.75rem', userSelect: 'none', cursor: 'pointer', padding: '0.25rem 0' }} onClick={() => setShowStops(!showStops)}>
+          <div className="stops-toggle-wrapper" style={{ marginTop: '1rem', display: 'flex', alignItems: 'center', gap: '0.75rem', userSelect: 'none', cursor: 'pointer', padding: '0.25rem 0' }} onClick={() => {
+            setShowStops((current) => !current)
+            setShowClosedStops(false)
+          }}>
             <div className={`custom-switch ${showStops ? 'active' : ''}`} style={{
               width: '36px',
               height: '20px',
@@ -332,8 +337,40 @@ function App() {
                 boxShadow: '0 1px 3px rgba(0,0,0,0.3)'
               }} />
             </div>
-            <span style={{ fontSize: '0.85rem', fontWeight: 600, color: showStops ? 'var(--text-primary)' : 'var(--text-muted)' }}>Durakları Haritada Göster</span>
+            <span style={{ fontSize: '0.85rem', fontWeight: 600, color: showStops ? 'var(--text-primary)' : 'var(--text-muted)' }}>Tüm Durakları Haritada Göster ({stopsData.length})</span>
           </div>
+
+          <div className="stops-toggle-wrapper" style={{ marginTop: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem', userSelect: 'none', cursor: 'pointer', padding: '0.25rem 0' }} onClick={() => {
+            setShowClosedStops((current) => !current)
+            setShowStops(false)
+          }}>
+            <div className={`custom-switch ${showClosedStops ? 'active' : ''}`} style={{
+              width: '36px',
+              height: '20px',
+              borderRadius: '10px',
+              backgroundColor: showClosedStops ? '#f59e0b' : 'rgba(255, 255, 255, 0.1)',
+              position: 'relative',
+              transition: 'background-color 0.2s',
+              border: '1px solid rgba(255, 255, 255, 0.15)'
+            }}>
+              <div style={{
+                width: '16px',
+                height: '16px',
+                borderRadius: '50%',
+                backgroundColor: '#fff',
+                position: 'absolute',
+                top: '1px',
+                left: showClosedStops ? '17px' : '1px',
+                transition: 'left 0.2s',
+                boxShadow: '0 1px 3px rgba(0,0,0,0.3)'
+              }} />
+            </div>
+            <span style={{ fontSize: '0.85rem', fontWeight: 600, color: showClosedStops ? 'var(--text-primary)' : 'var(--text-muted)' }}>Kapalı Durakları Haritada Göster ({closedStops.length})</span>
+          </div>
+
+          <p style={{ margin: '0.6rem 0 0', fontSize: '0.72rem', lineHeight: 1.4, color: 'var(--text-muted)' }}>
+            Durak üstüne tıklayarak ilgili durak hakkında bilgi alabilirsiniz.
+          </p>
         </div>
 
         {/* Results Area inside Sidebar */}
@@ -514,6 +551,27 @@ function App() {
               >
                 <Popup>
                   <div style={{ color: 'var(--text-primary, #ffffff)', fontWeight: 600, fontSize: '0.85rem' }}>{stop.name}</div>
+                </Popup>
+              </CircleMarker>
+            ))}
+
+            {showClosedStops && closedStops.map(([type, lat, lng], idx) => (
+              <CircleMarker
+                key={idx}
+                center={[lat, lng]}
+                radius={5.5}
+                pathOptions={{
+                  fillColor: '#f59e0b',
+                  fillOpacity: 0.9,
+                  color: '#ffffff',
+                  weight: 1.5
+                }}
+              >
+                <Tooltip direction="top" offset={[0, -6]} opacity={0.95} sticky>
+                  <strong>{type}</strong>
+                </Tooltip>
+                <Popup>
+                  <div style={{ fontWeight: 600 }}>{type}</div>
                 </Popup>
               </CircleMarker>
             ))}
