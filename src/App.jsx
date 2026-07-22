@@ -7,6 +7,27 @@ import stopsData from './data/stops.json';
 import closedStops from './data/closedStops';
 
 // Custom Leaflet Pin Markers using CSS / SVG
+const MAP_TILES = {
+  dark: {
+    name: 'Gece',
+    icon: '🌙',
+    url: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>'
+  },
+  voyager: {
+    name: 'Sokak',
+    icon: '🗺️',
+    url: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>'
+  },
+  satellite: {
+    name: 'Uydu',
+    icon: '🛰️',
+    url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+    attribution: '&copy; Esri, Maxar, Earthstar Geographics'
+  }
+};
+
 const createCustomMarker = (type) => {
   return L.divIcon({
     html: `
@@ -202,6 +223,8 @@ function App() {
   const [errorMsg, setErrorMsg] = useState('')
   const [showStops, setShowStops] = useState(false)
   const [showClosedStops, setShowClosedStops] = useState(false)
+  const [isBottomSheetExpanded, setIsBottomSheetExpanded] = useState(false)
+  const [activeTileKey, setActiveTileKey] = useState('voyager')
 
   const locations = useMemo(() => getLocations(), [])
 
@@ -212,6 +235,19 @@ function App() {
     setRouteResult(result)
     setSelectedRouteIndex(0) // Default to first route option
   }
+
+  // Swap source and destination values
+  const handleSwap = () => {
+    const newSource = destination;
+    const newDest = source;
+    setSource(newSource);
+    setDestination(newDest);
+    if (newSource && newDest && newSource !== newDest) {
+      const result = findRoutes(newSource, newDest);
+      setRouteResult(result);
+      setSelectedRouteIndex(0);
+    }
+  };
 
   const findMyLocation = () => {
     setLocating(true)
@@ -261,8 +297,25 @@ function App() {
 
   return (
     <div className="dashboard-container">
-      {/* Sidebar Panel */}
-      <div className="sidebar">
+      {/* Sidebar / Bottom Sheet Panel */}
+      <div className={`sidebar ${isBottomSheetExpanded ? 'mobile-expanded' : ''}`}>
+        {/* Mobile Bottom Sheet Handle Bar */}
+        <div 
+          className="bottom-sheet-handle-bar"
+          onClick={() => setIsBottomSheetExpanded(!isBottomSheetExpanded)}
+          title={isBottomSheetExpanded ? "Haritayı göster" : "Paneli aç"}
+        >
+          <div className="handle-pill"></div>
+          <div className="mobile-handle-info">
+            <span className="mobile-handle-title">
+              {routeResult && source && destination ? `${source} ➔ ${destination}` : 'Rota Planlayıcı'}
+            </span>
+            <span className="mobile-handle-action">
+              {isBottomSheetExpanded ? 'Haritayı Gör 🗺️' : 'Rotaları Gör 📋'}
+            </span>
+          </div>
+        </div>
+
         <div className="sidebar-header">
           <div className="brand-section">
             <div className="brand-icon-wrapper">
@@ -292,6 +345,22 @@ function App() {
             locating={locating}
             icon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>}
           />
+
+          {/* Swap Origin / Destination Button */}
+          <div className="swap-button-container">
+            <button
+              type="button"
+              className="swap-button"
+              onClick={handleSwap}
+              disabled={!source && !destination}
+              title="Kalkış ve Varış Noktalarını Değiştir (Tersine Çevir)"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M7 16V4M7 4L3 8M7 4L11 8" />
+                <path d="M17 8V20M17 20L21 16M17 20L13 16" />
+              </svg>
+            </button>
+          </div>
 
           <Autocomplete
             label="Varış Noktası"
@@ -482,10 +551,27 @@ function App() {
       {/* Map Display Panel */}
       <div className="map-panel">
         <div className="map-wrapper-inner">
+          {/* Floating Map Tile Switcher */}
+          <div className="map-tile-switcher">
+            {Object.entries(MAP_TILES).map(([key, tile]) => (
+              <button
+                key={key}
+                type="button"
+                className={`tile-switcher-btn ${activeTileKey === key ? 'active' : ''}`}
+                onClick={() => setActiveTileKey(key)}
+                title={tile.name}
+              >
+                <span className="tile-icon">{tile.icon}</span>
+                <span className="tile-name">{tile.name}</span>
+              </button>
+            ))}
+          </div>
+
           <MapContainer center={defaultCenter} zoom={13} zoomControl={true}>
             <TileLayer
-              url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'
+              key={activeTileKey}
+              url={MAP_TILES[activeTileKey].url}
+              attribution={MAP_TILES[activeTileKey].attribution}
             />
             <MapUpdater sourceCoords={sourceCoords} destCoords={destCoords} transferCoords={transferCoords} />
 
