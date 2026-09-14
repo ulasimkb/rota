@@ -11,14 +11,15 @@ const MAP_TILES = {
   dark: {
     name: 'Gece',
     icon: '🌙',
-    url: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>'
+    url: 'https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',
+    labelsUrl: 'https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}',
+    attribution: 'Tiles &copy; Esri'
   },
   voyager: {
     name: 'Sokak',
     icon: '🗺️',
-    url: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>'
+    url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   },
   satellite: {
     name: 'Uydu',
@@ -573,6 +574,12 @@ function App() {
               url={MAP_TILES[activeTileKey].url}
               attribution={MAP_TILES[activeTileKey].attribution}
             />
+            {MAP_TILES[activeTileKey].labelsUrl && (
+              <TileLayer
+                key={`${activeTileKey}-labels`}
+                url={MAP_TILES[activeTileKey].labelsUrl}
+              />
+            )}
             <MapUpdater sourceCoords={sourceCoords} destCoords={destCoords} transferCoords={transferCoords} />
 
             {sourceCoords && (
