@@ -1,33 +1,99 @@
-import { useState, useMemo, useEffect, useRef } from 'react'
-import { getLocations, findRoutes, findClosestLocation, getLocationCoords } from './utils/routeFinder'
+import { useState, useMemo, useEffect, useRef, useId } from 'react'
+import { getLocations, findRoutes, findClosestLocation, getLocationCoords, findNearbyStops } from './utils/routeFinder'
 import { MapContainer, TileLayer, Marker, Polyline, Popup, Tooltip, useMap, CircleMarker } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet';
 import stopsData from './data/stops.json';
 import closedStops from './data/closedStops';
 
-// Custom Leaflet Pin Markers using CSS / SVG
+// Leaflet draws on canvas, which cannot resolve CSS variables, so the
+// tokens from index.css are read once at runtime (hex values are fallbacks).
+const readToken = (name, fallback) => {
+  const value = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  return value || fallback;
+};
+
+const getMapColors = () => ({
+  primary: readToken('--accent-primary', '#6366f1'),
+  success: readToken('--accent-success', '#10b981'),
+  warning: readToken('--accent-warning', '#f59e0b'),
+  stroke: readToken('--map-marker-stroke', '#ffffff')
+});
+
+const MOBILE_QUERY = '(max-width: 768px)';
+
+function useMediaQuery(query) {
+  const [matches, setMatches] = useState(() => window.matchMedia(query).matches);
+  useEffect(() => {
+    const mql = window.matchMedia(query);
+    const onChange = (e) => setMatches(e.matches);
+    mql.addEventListener('change', onChange);
+    return () => mql.removeEventListener('change', onChange);
+  }, [query]);
+  return matches;
+}
+
+const numberFormat = new Intl.NumberFormat('tr-TR', { maximumFractionDigits: 1 });
+
+const formatDistance = (km) => {
+  if (!Number.isFinite(km) || km >= 99999) return null;
+  return km < 1 ? `${Math.round(km * 1000)} m` : `${numberFormat.format(km)} km`;
+};
+
+const TILE_ICONS = {
+  dark: <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />,
+  voyager: (
+    <>
+      <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6" />
+      <line x1="8" y1="2" x2="8" y2="18" />
+      <line x1="16" y1="6" x2="16" y2="22" />
+    </>
+  ),
+  satellite: (
+    <>
+      <circle cx="12" cy="12" r="10" />
+      <path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20" />
+    </>
+  )
+};
+
 const MAP_TILES = {
   dark: {
     name: 'Gece',
-    icon: '🌙',
     url: 'https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',
     labelsUrl: 'https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}',
     attribution: 'Tiles &copy; Esri'
   },
   voyager: {
     name: 'Sokak',
-    icon: '🗺️',
     url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   },
   satellite: {
     name: 'Uydu',
-    icon: '🛰️',
     url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
     attribution: '&copy; Esri, Maxar, Earthstar Geographics'
   }
 };
+
+const normalize = (text) => text.toLocaleLowerCase('tr');
+
+function ArrowIcon({ size = 14 }) {
+  return (
+    <svg className="inline-arrow" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <line x1="5" y1="12" x2="19" y2="12" />
+      <polyline points="12 5 19 12 12 19" />
+    </svg>
+  );
+}
+
+function RouteLabel({ from, to }) {
+  return (
+    <>
+      {from} <ArrowIcon /><span className="sr-only">→</span> {to}
+    </>
+  );
+}
 
 const createCustomMarker = (type) => {
   return L.divIcon({
@@ -66,18 +132,40 @@ function MapUpdater({ sourceCoords, destCoords, transferCoords }) {
   return null;
 }
 
-// Searchable Autocomplete Select Dropdown
+// Accessible on/off switch for map layers
+function LayerSwitch({ checked, onToggle, variant, children }) {
+  return (
+    <button
+      type="button"
+      role="switch"
+      aria-checked={checked}
+      className={`layer-switch ${variant}`}
+      onClick={onToggle}
+    >
+      <span className="switch-track" aria-hidden="true">
+        <span className="switch-thumb" />
+      </span>
+      <span className="switch-label">{children}</span>
+    </button>
+  );
+}
+
+// Searchable Autocomplete Select Dropdown (ARIA combobox pattern)
 function Autocomplete({ label, value, onChange, options, placeholder, icon, onLocationClick, locating, disabledOptions = [] }) {
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [highlightedIndex, setHighlightedIndex] = useState(-1);
   const containerRef = useRef(null);
+  const listRef = useRef(null);
+  const baseId = useId();
+  const inputId = `${baseId}-input`;
+  const listId = `${baseId}-list`;
+  const optionId = (idx) => `${baseId}-opt-${idx}`;
 
   const filteredOptions = useMemo(() => {
     if (!searchQuery || searchQuery === value) return options;
-    return options.filter(opt =>
-      opt.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+    const query = normalize(searchQuery);
+    return options.filter(opt => normalize(opt).includes(query));
   }, [options, searchQuery, value]);
 
   useEffect(() => {
@@ -89,6 +177,19 @@ function Autocomplete({ label, value, onChange, options, placeholder, icon, onLo
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+
+  useEffect(() => {
+    if (!isOpen || highlightedIndex < 0) return;
+    const el = listRef.current?.querySelector(`[data-index="${highlightedIndex}"]`);
+    el?.scrollIntoView({ block: 'nearest' });
+  }, [highlightedIndex, isOpen]);
+
+  const selectOption = (val) => {
+    if (disabledOptions.includes(val)) return;
+    onChange(val);
+    setSearchQuery(val);
+    setIsOpen(false);
+  };
 
   const handleKeyDown = (e) => {
     if (!isOpen) {
@@ -108,33 +209,40 @@ function Autocomplete({ label, value, onChange, options, placeholder, icon, onLo
     } else if (e.key === 'Enter') {
       e.preventDefault();
       if (highlightedIndex >= 0 && highlightedIndex < filteredOptions.length) {
-        const val = filteredOptions[highlightedIndex];
-        if (!disabledOptions.includes(val)) {
-          onChange(val);
-          setSearchQuery(val);
-          setIsOpen(false);
-        }
+        selectOption(filteredOptions[highlightedIndex]);
       }
     } else if (e.key === 'Escape') {
       setIsOpen(false);
     }
   };
 
+  const activeDescendant = isOpen && highlightedIndex >= 0 && highlightedIndex < filteredOptions.length
+    ? optionId(highlightedIndex)
+    : undefined;
+
   return (
     <div className="input-container" ref={containerRef}>
       <div className="input-label-row">
-        <span className="input-label">{label}</span>
+        <label className="input-label" htmlFor={inputId}>{label}</label>
       </div>
       <div className="autocomplete-wrapper">
         <div className="input-field-wrapper">
-          <span className="input-icon-left">{icon}</span>
+          <span className="input-icon-left" aria-hidden="true">{icon}</span>
           <input
+            id={inputId}
             type="text"
+            role="combobox"
+            aria-expanded={isOpen}
+            aria-controls={listId}
+            aria-autocomplete="list"
+            aria-activedescendant={activeDescendant}
+            autoComplete="off"
             className="autocomplete-input"
             placeholder={placeholder}
             value={isOpen ? searchQuery : (value || '')}
             onChange={(e) => {
               setSearchQuery(e.target.value);
+              setHighlightedIndex(0);
               if (!isOpen) setIsOpen(true);
             }}
             onFocus={() => {
@@ -156,59 +264,60 @@ function Autocomplete({ label, value, onChange, options, placeholder, icon, onLo
                   onChange('');
                   setSearchQuery('');
                 }}
+                aria-label={`${label} alanını temizle`}
                 title="Temizle"
               >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
               </button>
             )}
             {onLocationClick && (
               <button
                 type="button"
-                className="input-action-btn"
+                className={`input-action-btn ${locating ? 'is-locating' : ''}`}
                 onClick={onLocationClick}
                 disabled={locating}
+                aria-label={locating ? 'Konumunuz alınıyor' : 'Konumumu kullan'}
                 title="Konumumu Kullan"
-                style={{ color: locating ? 'var(--accent-success)' : 'inherit' }}
               >
                 {locating ? (
-                  <svg style={{ animation: 'spin 1s linear infinite' }} width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="12" cy="12" r="10" strokeDasharray="30 10"></circle></svg>
+                  <svg className="spinner" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10" strokeDasharray="30 10"></circle></svg>
                 ) : (
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                 )}
               </button>
             )}
           </div>
         </div>
 
-        {isOpen && (
-          <div className="autocomplete-dropdown">
-            {filteredOptions.length > 0 ? (
-              filteredOptions.map((opt, idx) => {
+        {isOpen && filteredOptions.length === 0 && (
+          <div className="autocomplete-dropdown autocomplete-no-results" role="status">Mahalle bulunamadı</div>
+        )}
+
+        {isOpen && filteredOptions.length > 0 && (
+          <ul className="autocomplete-dropdown" id={listId} role="listbox" aria-label={label} ref={listRef}>
+            {filteredOptions.map((opt, idx) => {
                 const isDisabled = disabledOptions.includes(opt);
                 const isSelected = opt === value;
                 return (
-                  <div
+                  <li
                     key={opt}
-                    className={`autocomplete-item ${idx === highlightedIndex ? 'highlighted' : ''} ${isSelected ? 'selected' : ''}`}
-                    style={{ opacity: isDisabled ? 0.4 : 1, pointerEvents: isDisabled ? 'none' : 'auto' }}
+                    id={optionId(idx)}
+                    data-index={idx}
+                    role="option"
+                    aria-selected={isSelected}
+                    aria-disabled={isDisabled || undefined}
+                    className={`autocomplete-item ${idx === highlightedIndex ? 'highlighted' : ''} ${isSelected ? 'selected' : ''} ${isDisabled ? 'disabled' : ''}`}
                     onMouseDown={(e) => {
                       e.preventDefault();
-                      if (!isDisabled) {
-                        onChange(opt);
-                        setSearchQuery(opt);
-                        setIsOpen(false);
-                      }
+                      selectOption(opt);
                     }}
                   >
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ color: isSelected ? 'var(--accent-primary)' : 'var(--text-muted)' }}><circle cx="12" cy="12" r="10"></circle></svg>
+                    <svg className="autocomplete-item-dot" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle></svg>
                     <span>{opt}</span>
-                  </div>
+                  </li>
                 );
-              })
-            ) : (
-              <div className="autocomplete-no-results">Mahalle bulunamadı</div>
-            )}
-          </div>
+              })}
+          </ul>
         )}
       </div>
     </div>
@@ -228,6 +337,10 @@ function App() {
   const [activeTileKey, setActiveTileKey] = useState('voyager')
 
   const locations = useMemo(() => getLocations(), [])
+  const mapColors = useMemo(() => getMapColors(), [])
+  const isMobile = useMediaQuery(MOBILE_QUERY)
+  // Collapsed bottom sheet: keep hidden content out of tab order and screen readers
+  const isSheetContentHidden = isMobile && !isBottomSheetExpanded
 
   // Auto-search when endpoints are fully selected
   const handleSearch = () => {
@@ -294,45 +407,67 @@ function App() {
     return null;
   }, [routeResult, activeRoute]);
 
+  // Keyboard/screen-reader alternative to the canvas stop markers
+  const nearbyStops = useMemo(() => {
+    if (!routeResult || !sourceCoords || !destCoords) return null;
+    return {
+      source: findNearbyStops(sourceCoords[0], sourceCoords[1], stopsData),
+      destination: findNearbyStops(destCoords[0], destCoords[1], stopsData)
+    };
+  }, [routeResult, sourceCoords, destCoords]);
+
+  // Text announced to screen readers when a search finishes
+  const resultAnnouncement = !routeResult
+    ? ''
+    : routeResult.type === 'none'
+      ? `${source} ile ${destination} arasında rota bulunamadı.`
+      : `${routeResult.routes.length} rota seçeneği bulundu: ${routeResult.type === 'direct' ? 'direkt hat' : 'aktarmalı'}.`;
+
   const defaultCenter = [39.4242, 29.9833]; // Kütahya default center
 
   return (
     <div className="dashboard-container">
       {/* Sidebar / Bottom Sheet Panel */}
-      <div className={`sidebar ${isBottomSheetExpanded ? 'mobile-expanded' : ''}`}>
+      <aside id="route-panel" className={`sidebar ${isBottomSheetExpanded ? 'mobile-expanded' : ''}`} aria-label="Rota planlayıcı">
         {/* Mobile Bottom Sheet Handle Bar */}
-        <div 
+        <button
+          type="button"
           className="bottom-sheet-handle-bar"
           onClick={() => setIsBottomSheetExpanded(!isBottomSheetExpanded)}
-          title={isBottomSheetExpanded ? "Haritayı göster" : "Paneli aç"}
+          aria-expanded={isBottomSheetExpanded}
+          aria-controls="route-panel-content"
         >
-          <div className="handle-pill"></div>
-          <div className="mobile-handle-info">
+          <span className="handle-pill" aria-hidden="true"></span>
+          <span className="mobile-handle-info">
             <span className="mobile-handle-title">
-              {routeResult && source && destination ? `${source} ➔ ${destination}` : 'Rota Planlayıcı'}
+              {routeResult && source && destination ? <RouteLabel from={source} to={destination} /> : 'Rota Planlayıcı'}
             </span>
             <span className="mobile-handle-action">
-              {isBottomSheetExpanded ? 'Haritayı Gör 🗺️' : 'Rotaları Gör 📋'}
+              {isBottomSheetExpanded ? 'Haritayı Gör' : 'Rotaları Gör'}
+              <svg className={`handle-chevron ${isBottomSheetExpanded ? 'is-down' : ''}`} width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15" /></svg>
             </span>
-          </div>
-        </div>
+          </span>
+        </button>
 
-        <div className="sidebar-header">
+        <div id="route-panel-content" className="sidebar-content" inert={isSheetContentHidden}>
+        <header className="sidebar-header">
           <div className="brand-section">
-            <div className="brand-icon-wrapper">
+            <div className="brand-icon-wrapper" aria-hidden="true">
               <svg className="brand-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="15" rx="2" ry="2"></rect><line x1="6" y1="21" x2="6" y2="18"></line><line x1="18" y1="21" x2="18" y2="18"></line><line x1="2" y1="12" x2="22" y2="12"></line></svg>
             </div>
             <h1 className="brand-title">Rota Kütahya</h1>
           </div>
           <p className="brand-subtitle">Mahalleler arası akıllı toplu taşıma ve aktarma kılavuzu</p>
-        </div>
+        </header>
 
-        {errorMsg && (
-          <div className="error-box">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-            <span>{errorMsg}</span>
-          </div>
-        )}
+        <div role="alert">
+          {errorMsg && (
+            <div className="error-box">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              <span>{errorMsg}</span>
+            </div>
+          )}
+        </div>
 
         <div className="search-panel">
           <Autocomplete
@@ -354,9 +489,10 @@ function App() {
               className="swap-button"
               onClick={handleSwap}
               disabled={!source && !destination}
-              title="Kalkış ve Varış Noktalarını Değiştir (Tersine Çevir)"
+              aria-label="Kalkış ve varış noktalarını yer değiştir"
+              title="Kalkış ve Varış Noktalarını Değiştir"
             >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M7 16V4M7 4L3 8M7 4L11 8" />
                 <path d="M17 8V20M17 20L21 16M17 20L13 16" />
               </svg>
@@ -374,201 +510,202 @@ function App() {
           />
 
           <button
+            type="button"
             className="search-button"
             onClick={handleSearch}
             disabled={!source || !destination || source === destination}
           >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
             <span>Rota Planla</span>
           </button>
 
-          <div className="stops-toggle-wrapper" style={{ marginTop: '1rem', display: 'flex', alignItems: 'center', gap: '0.75rem', userSelect: 'none', cursor: 'pointer', padding: '0.25rem 0' }} onClick={() => {
-            setShowStops((current) => !current)
-            setShowClosedStops(false)
-          }}>
-            <div className={`custom-switch ${showStops ? 'active' : ''}`} style={{
-              width: '36px',
-              height: '20px',
-              borderRadius: '10px',
-              backgroundColor: showStops ? 'var(--accent-success, #22c55e)' : 'rgba(255, 255, 255, 0.1)',
-              position: 'relative',
-              transition: 'background-color 0.2s',
-              border: '1px solid rgba(255, 255, 255, 0.15)'
-            }}>
-              <div style={{
-                width: '16px',
-                height: '16px',
-                borderRadius: '50%',
-                backgroundColor: '#fff',
-                position: 'absolute',
-                top: '1px',
-                left: showStops ? '17px' : '1px',
-                transition: 'left 0.2s',
-                boxShadow: '0 1px 3px rgba(0,0,0,0.3)'
-              }} />
-            </div>
-            <span style={{ fontSize: '0.85rem', fontWeight: 600, color: showStops ? 'var(--text-primary)' : 'var(--text-muted)' }}>Tüm Durakları Haritada Göster ({stopsData.length})</span>
-          </div>
+          <div className="layer-switches">
+            <LayerSwitch
+              checked={showStops}
+              variant="stops"
+              onToggle={() => {
+                setShowStops((current) => !current)
+                setShowClosedStops(false)
+              }}
+            >
+              Tüm Durakları Haritada Göster ({stopsData.length})
+            </LayerSwitch>
 
-          <div className="stops-toggle-wrapper" style={{ marginTop: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem', userSelect: 'none', cursor: 'pointer', padding: '0.25rem 0' }} onClick={() => {
-            setShowClosedStops((current) => !current)
-            setShowStops(false)
-          }}>
-            <div className={`custom-switch ${showClosedStops ? 'active' : ''}`} style={{
-              width: '36px',
-              height: '20px',
-              borderRadius: '10px',
-              backgroundColor: showClosedStops ? '#f59e0b' : 'rgba(255, 255, 255, 0.1)',
-              position: 'relative',
-              transition: 'background-color 0.2s',
-              border: '1px solid rgba(255, 255, 255, 0.15)'
-            }}>
-              <div style={{
-                width: '16px',
-                height: '16px',
-                borderRadius: '50%',
-                backgroundColor: '#fff',
-                position: 'absolute',
-                top: '1px',
-                left: showClosedStops ? '17px' : '1px',
-                transition: 'left 0.2s',
-                boxShadow: '0 1px 3px rgba(0,0,0,0.3)'
-              }} />
-            </div>
-            <span style={{ fontSize: '0.85rem', fontWeight: 600, color: showClosedStops ? 'var(--text-primary)' : 'var(--text-muted)' }}>Kapalı Durakları Haritada Göster ({closedStops.length})</span>
-          </div>
+            <LayerSwitch
+              checked={showClosedStops}
+              variant="closed"
+              onToggle={() => {
+                setShowClosedStops((current) => !current)
+                setShowStops(false)
+              }}
+            >
+              Kapalı Durakları Haritada Göster ({closedStops.length})
+            </LayerSwitch>
 
-          <p style={{ margin: '0.6rem 0 0', fontSize: '0.72rem', lineHeight: 1.4, color: 'var(--text-muted)' }}>
-            Durak üstüne tıklayarak ilgili durak hakkında bilgi alabilirsiniz.
-          </p>
+            <p className="layer-hint">
+              Durak üstüne tıklayarak ilgili durak hakkında bilgi alabilirsiniz.
+            </p>
+          </div>
         </div>
 
         {/* Results Area inside Sidebar */}
-        <div className="results-container">
+        <section className="results-container" aria-label="Rota sonuçları">
+          <p className="sr-only" aria-live="polite">{resultAnnouncement}</p>
           {!routeResult ? (
             <div className="results-placeholder">
-              <svg className="results-placeholder-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+              <svg className="results-placeholder-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
               <div>
-                <p className="results-title">Güzergah Hazır Değil</p>
-                <p style={{ fontSize: '0.85rem' }}>Başlangıç ve varış mahallelerini seçip "Rota Planla" butonuna tıklayarak aramayı başlatın.</p>
+                <h2 className="results-title">Güzergah Hazır Değil</h2>
+                <p className="results-placeholder-text">Başlangıç ve varış mahallelerini seçip "Rota Planla" butonuna tıklayarak aramayı başlatın.</p>
               </div>
             </div>
           ) : (
             <div>
               <div className="results-info-row">
-                <span className="results-route-summary">{source} ➔ {destination}</span>
+                <h2 className="results-route-summary"><RouteLabel from={source} to={destination} /></h2>
                 <span className={`results-type-pill ${routeResult.type}`}>
                   {routeResult.type === 'direct' ? 'Direkt Hat' : routeResult.type === 'transfer' ? 'Aktarmalı' : 'Rota Yok'}
                 </span>
               </div>
 
               {routeResult.type === 'direct' && (
-                <div>
+                <div className="route-list">
                   {routeResult.routes.map((r, idx) => (
-                    <div
+                    <button
+                      type="button"
                       key={idx}
-                      className={`route-card ${selectedRouteIndex === idx ? 'selected-card' : ''}`}
-                      style={{ borderColor: selectedRouteIndex === idx ? 'var(--accent-success)' : '' }}
+                      className={`route-card direct ${selectedRouteIndex === idx ? 'selected-card' : ''}`}
+                      aria-pressed={selectedRouteIndex === idx}
                       onClick={() => setSelectedRouteIndex(idx)}
                     >
-                      <div className="route-card-header">
+                      <span className="route-card-header">
                         <span className="results-type-pill direct">Seçenek {idx + 1}</span>
-                        <span className="route-card-meta">~{r.score} Sefer/Gün</span>
-                      </div>
-                      <div className="transit-timeline">
-                        <div className="timeline-step">
-                          <div className="timeline-dot start"></div>
-                          <div className="timeline-title">{source}</div>
-                          <div className="timeline-desc">Başlangıç Noktası</div>
-                        </div>
-                        <div style={{ margin: '-0.3rem 0', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <span className="route-card-meta">~{r.score} sefer/gün</span>
+                      </span>
+                      <span className="transit-timeline">
+                        <span className="timeline-step">
+                          <span className="timeline-dot start"></span>
+                          <span className="timeline-title">{source}</span>
+                          <span className="timeline-desc">Başlangıç Noktası</span>
+                        </span>
+                        <span className="timeline-line-row">
                           <span className="line-badge success-badge">{r.line}</span>
-                          <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Hattı ile doğrudan ulaşım</span>
-                        </div>
-                        <div className="timeline-step">
-                          <div className="timeline-dot end"></div>
-                          <div className="timeline-title">{destination}</div>
-                          <div className="timeline-desc">Varış Noktası</div>
-                        </div>
-                      </div>
-                    </div>
+                          <span className="timeline-line-text">Hattı ile doğrudan ulaşım</span>
+                        </span>
+                        <span className="timeline-step">
+                          <span className="timeline-dot end"></span>
+                          <span className="timeline-title">{destination}</span>
+                          <span className="timeline-desc">Varış Noktası</span>
+                        </span>
+                      </span>
+                    </button>
                   ))}
                 </div>
               )}
 
               {routeResult.type === 'transfer' && (
-                <div>
+                <div className="route-list">
                   {routeResult.routes.map((r, idx) => (
-                    <div
+                    <button
+                      type="button"
                       key={idx}
-                      className="route-card"
-                      style={{ borderColor: selectedRouteIndex === idx ? 'var(--accent-primary)' : '' }}
+                      className={`route-card transfer ${selectedRouteIndex === idx ? 'selected-card' : ''}`}
+                      aria-pressed={selectedRouteIndex === idx}
                       onClick={() => setSelectedRouteIndex(idx)}
                     >
-                      <div className="route-card-header">
+                      <span className="route-card-header">
                         <span className="results-type-pill transfer">Seçenek {idx + 1}</span>
-                        <span className="route-card-meta">~{r.freqLimit} Sefer | {r.dist} km</span>
-                      </div>
-                      <div className="transit-timeline">
-                        <div className="timeline-step">
-                          <div className="timeline-dot start"></div>
-                          <div className="timeline-title">{source}</div>
-                          <div className="timeline-desc">
+                        <span className="route-card-meta">
+                          ~{r.freqLimit} sefer/gün
+                          {formatDistance(r.rawDist) && <> · kuş uçuşu {formatDistance(r.rawDist)}</>}
+                        </span>
+                      </span>
+                      <span className="transit-timeline">
+                        <span className="timeline-step">
+                          <span className="timeline-dot start"></span>
+                          <span className="timeline-title">{source}</span>
+                          <span className="timeline-desc">
                             <span>Binilecek Hat:</span>
                             <span className="line-badge">{r.line1}</span>
-                          </div>
-                        </div>
-                        <div className="timeline-step">
-                          <div className="timeline-dot transfer"></div>
-                          <div className="timeline-title">{r.transferPoint}</div>
-                          <div className="timeline-desc">
-                            <span>Burada Aktarma Yapın ➔</span>
+                          </span>
+                        </span>
+                        <span className="timeline-step">
+                          <span className="timeline-dot transfer"></span>
+                          <span className="timeline-title">{r.transferPoint}</span>
+                          <span className="timeline-desc">
+                            <span>Burada Aktarma Yapın</span>
+                            <ArrowIcon size={12} />
                             <span className="line-badge success-badge">{r.line2}</span>
-                          </div>
-                        </div>
-                        <div className="timeline-step">
-                          <div className="timeline-dot end"></div>
-                          <div className="timeline-title">{destination}</div>
-                          <div className="timeline-desc">Varış Noktası</div>
-                        </div>
-                      </div>
-                    </div>
+                          </span>
+                        </span>
+                        <span className="timeline-step">
+                          <span className="timeline-dot end"></span>
+                          <span className="timeline-title">{destination}</span>
+                          <span className="timeline-desc">Varış Noktası</span>
+                        </span>
+                      </span>
+                    </button>
                   ))}
                 </div>
               )}
 
               {routeResult.type === 'none' && (
                 <div className="no-route-card">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: 'var(--accent-danger)' }}><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-                  <p style={{ fontWeight: 700, color: 'var(--text-primary)' }}>Rota Bulunamadı</p>
+                  <svg className="no-route-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  <p className="no-route-title">Rota Bulunamadı</p>
                   <p>Bu iki mahalle arasında doğrudan veya tek aktarmalı bir rota bulunmamaktadır. Lütfen merkez durakları kullanarak ulaşmayı deneyin.</p>
                 </div>
               )}
             </div>
           )}
+
+          {nearbyStops && (
+            <details className="nearby-stops">
+              <summary>Kalkış ve varış çevresindeki duraklar</summary>
+              {[
+                { title: `${source} yakınında`, stops: nearbyStops.source },
+                { title: `${destination} yakınında`, stops: nearbyStops.destination }
+              ].map(group => (
+                <div className="nearby-group" key={group.title}>
+                  <h3 className="nearby-title">{group.title}</h3>
+                  <ul className="nearby-list">
+                    {group.stops.map(stop => (
+                      <li key={stop.name}>
+                        <span>{stop.name}</span>
+                        <span className="nearby-dist">{formatDistance(stop.dist)}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </details>
+          )}
+        </section>
         </div>
-      </div>
+      </aside>
 
       {/* Map Display Panel */}
-      <div className="map-panel">
+      <main className="map-panel" aria-label="Harita">
         <div className="map-wrapper-inner">
           {/* Floating Map Tile Switcher */}
-          <div className="map-tile-switcher">
+          <div className="map-tile-switcher" role="group" aria-label="Harita görünümü">
             {Object.entries(MAP_TILES).map(([key, tile]) => (
               <button
                 key={key}
                 type="button"
                 className={`tile-switcher-btn ${activeTileKey === key ? 'active' : ''}`}
+                aria-pressed={activeTileKey === key}
                 onClick={() => setActiveTileKey(key)}
-                title={tile.name}
               >
-                <span className="tile-icon">{tile.icon}</span>
+                <svg className="tile-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  {TILE_ICONS[key]}
+                </svg>
                 <span className="tile-name">{tile.name}</span>
               </button>
             ))}
           </div>
 
-          <MapContainer center={defaultCenter} zoom={13} zoomControl={true}>
+          <MapContainer center={defaultCenter} zoom={13} zoomControl={true} preferCanvas={true}>
             <TileLayer
               key={activeTileKey}
               url={MAP_TILES[activeTileKey].url}
@@ -583,19 +720,19 @@ function App() {
             <MapUpdater sourceCoords={sourceCoords} destCoords={destCoords} transferCoords={transferCoords} />
 
             {sourceCoords && (
-              <Marker position={sourceCoords} icon={startIcon}>
+              <Marker position={sourceCoords} icon={startIcon} alt={`Kalkış: ${source}`}>
                 <Popup>Kalkış: {source}</Popup>
               </Marker>
             )}
-            
+
             {transferCoords && (
-              <Marker position={transferCoords} icon={transferIcon}>
+              <Marker position={transferCoords} icon={transferIcon} alt={`Aktarma: ${activeRoute?.transferPoint}`}>
                 <Popup>Aktarma Noktası: {activeRoute?.transferPoint}</Popup>
               </Marker>
             )}
 
             {destCoords && (
-              <Marker position={destCoords} icon={endIcon}>
+              <Marker position={destCoords} icon={endIcon} alt={`Varış: ${destination}`}>
                 <Popup>Varış: {destination}</Popup>
               </Marker>
             )}
@@ -604,10 +741,7 @@ function App() {
             {sourceCoords && destCoords && routeResult?.type === 'direct' && (
               <Polyline
                 positions={[sourceCoords, destCoords]}
-                color="var(--accent-success)"
-                weight={4}
-                dashArray="8, 8"
-                opacity={0.8}
+                pathOptions={{ color: mapColors.success, weight: 4, dashArray: '8, 8', opacity: 0.8 }}
               />
             )}
 
@@ -616,16 +750,11 @@ function App() {
               <>
                 <Polyline
                   positions={[sourceCoords, transferCoords]}
-                  color="var(--accent-primary)"
-                  weight={4}
-                  opacity={0.9}
+                  pathOptions={{ color: mapColors.primary, weight: 4, opacity: 0.9 }}
                 />
                 <Polyline
                   positions={[transferCoords, destCoords]}
-                  color="var(--accent-success)"
-                  weight={4}
-                  opacity={0.9}
-                  dashArray="4, 6"
+                  pathOptions={{ color: mapColors.success, weight: 4, opacity: 0.9, dashArray: '4, 6' }}
                 />
               </>
             )}
@@ -636,14 +765,14 @@ function App() {
                 center={[stop.lat, stop.lng]}
                 radius={4.5}
                 pathOptions={{
-                  fillColor: 'var(--accent-primary, #3b82f6)',
+                  fillColor: mapColors.primary,
                   fillOpacity: 0.85,
-                  color: '#ffffff',
+                  color: mapColors.stroke,
                   weight: 1.5
                 }}
               >
                 <Popup>
-                  <div style={{ color: 'var(--text-primary, #ffffff)', fontWeight: 600, fontSize: '0.85rem' }}>{stop.name}</div>
+                  <div className="map-popup-title">{stop.name}</div>
                 </Popup>
               </CircleMarker>
             ))}
@@ -654,9 +783,9 @@ function App() {
                 center={[lat, lng]}
                 radius={5.5}
                 pathOptions={{
-                  fillColor: '#f59e0b',
+                  fillColor: mapColors.warning,
                   fillOpacity: 0.9,
-                  color: '#ffffff',
+                  color: mapColors.stroke,
                   weight: 1.5
                 }}
               >
@@ -664,13 +793,13 @@ function App() {
                   <strong>{type}</strong>
                 </Tooltip>
                 <Popup>
-                  <div style={{ fontWeight: 600 }}>{type}</div>
+                  <div className="map-popup-title">{type}</div>
                 </Popup>
               </CircleMarker>
             ))}
           </MapContainer>
         </div>
-      </div>
+      </main>
     </div>
   )
 }

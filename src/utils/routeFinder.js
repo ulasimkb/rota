@@ -41,6 +41,14 @@ export const findClosestLocation = (lat, lng) => {
     return closest;
 };
 
+// Nearest stops to a point, closest first. Distances in km.
+export const findNearbyStops = (lat, lng, stops, limit = 5) => {
+    return stops
+        .map(stop => ({ ...stop, dist: haversineDist(lat, lng, stop.lat, stop.lng) }))
+        .sort((a, b) => a.dist - b.dist)
+        .slice(0, limit);
+};
+
 // HELPER: Get frequency bottleneck
 const getFrequencyScore = (line1, line2) => {
     const f1 = frequencies[line1] || 0;
