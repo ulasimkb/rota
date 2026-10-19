@@ -5,6 +5,8 @@ import 'leaflet/dist/leaflet.css'
 import L from 'leaflet';
 import stopsData from './data/stops.json';
 import closedStops from './data/closedStops';
+import BottomSheet from './BottomSheet';
+import { SNAP, PEEK_HEIGHT, HALF_RATIO, useViewportHeight } from './sheetConfig';
 
 // Leaflet draws on canvas, which cannot resolve CSS variables, so the
 // tokens from index.css are read once at runtime (hex values are fallbacks).
@@ -114,7 +116,7 @@ const startIcon = createCustomMarker('start');
 const endIcon = createCustomMarker('end');
 const transferIcon = createCustomMarker('transfer');
 
-function MapUpdater({ sourceCoords, destCoords, transferCoords }) {
+function MapUpdater({ sourceCoords, destCoords, transferCoords, bottomInset = 0 }) {
   const map = useMap();
   useEffect(() => {
     const points = [];
@@ -124,11 +126,12 @@ function MapUpdater({ sourceCoords, destCoords, transferCoords }) {
 
     if (points.length >= 2) {
       const bounds = L.latLngBounds(points);
-      map.fitBounds(bounds, { padding: [60, 60] });
+      // Keep the route clear of the mobile bottom sheet
+      map.fitBounds(bounds, { paddingTopLeft: [60, 60], paddingBottomRight: [60, 60 + bottomInset] });
     } else if (points.length === 1) {
       map.setView(points[0], 14);
     }
-  }, [sourceCoords, destCoords, transferCoords, map]);
+  }, [sourceCoords, destCoords, transferCoords, bottomInset, map]);
   return null;
 }
 
@@ -333,14 +336,33 @@ function App() {
   const [errorMsg, setErrorMsg] = useState('')
   const [showStops, setShowStops] = useState(false)
   const [showClosedStops, setShowClosedStops] = useState(false)
-  const [isBottomSheetExpanded, setIsBottomSheetExpanded] = useState(false)
+  const [sheetSnap, setSheetSnap] = useState(SNAP.PEEK)
   const [activeTileKey, setActiveTileKey] = useState('voyager')
 
   const locations = useMemo(() => getLocations(), [])
   const mapColors = useMemo(() => getMapColors(), [])
   const isMobile = useMediaQuery(MOBILE_QUERY)
+  const viewportHeight = useViewportHeight()
+  const sheetRef = useRef(null)
+  const resultsRef = useRef(null)
   // Collapsed bottom sheet: keep hidden content out of tab order and screen readers
-  const isSheetContentHidden = isMobile && !isBottomSheetExpanded
+  const isSheetContentHidden = isMobile && sheetSnap === SNAP.PEEK
+  const isSheetOpen = sheetSnap !== SNAP.PEEK
+  // Map area covered by the sheet, so fitted routes stay visible above it
+  const mapBottomInset = !isMobile ? 0
+    : sheetSnap === SNAP.HALF ? Math.round(viewportHeight * HALF_RATIO)
+    : PEEK_HEIGHT
+
+  // On mobile, show map and route together once results arrive
+  const showResults = (result) => {
+    if (!isMobile || !result) return
+    setSheetSnap(SNAP.HALF)
+    requestAnimationFrame(() => {
+      const sheet = sheetRef.current
+      const results = resultsRef.current
+      if (sheet && results) sheet.scrollTo({ top: results.offsetTop - PEEK_HEIGHT })
+    })
+  }
 
   // Auto-search when endpoints are fully selected
   const handleSearch = () => {
@@ -348,6 +370,7 @@ function App() {
     const result = findRoutes(source, destination)
     setRouteResult(result)
     setSelectedRouteIndex(0) // Default to first route option
+    showResults(result)
   }
 
   // Swap source and destination values
@@ -360,6 +383,7 @@ function App() {
       const result = findRoutes(newSource, newDest);
       setRouteResult(result);
       setSelectedRouteIndex(0);
+      showResults(result);
     }
   };
 
@@ -428,27 +452,34 @@ function App() {
   return (
     <div className="dashboard-container">
       {/* Sidebar / Bottom Sheet Panel */}
-      <aside id="route-panel" className={`sidebar ${isBottomSheetExpanded ? 'mobile-expanded' : ''}`} aria-label="Rota planlayıcı">
-        {/* Mobile Bottom Sheet Handle Bar */}
-        <button
-          type="button"
-          className="bottom-sheet-handle-bar"
-          onClick={() => setIsBottomSheetExpanded(!isBottomSheetExpanded)}
-          aria-expanded={isBottomSheetExpanded}
-          aria-controls="route-panel-content"
-        >
-          <span className="handle-pill" aria-hidden="true"></span>
-          <span className="mobile-handle-info">
-            <span className="mobile-handle-title">
-              {routeResult && source && destination ? <RouteLabel from={source} to={destination} /> : 'Rota Planlayıcı'}
+      <BottomSheet
+        id="route-panel"
+        label="Rota planlayıcı"
+        isMobile={isMobile}
+        snap={sheetSnap}
+        onSnapChange={setSheetSnap}
+        sheetRef={sheetRef}
+        handle={
+          <button
+            type="button"
+            className="bottom-sheet-handle-bar"
+            onClick={() => setSheetSnap(isSheetOpen ? SNAP.PEEK : routeResult ? SNAP.HALF : SNAP.FULL)}
+            aria-expanded={isSheetOpen}
+            aria-controls="route-panel-content"
+          >
+            <span className="handle-pill" aria-hidden="true"></span>
+            <span className="mobile-handle-info">
+              <span className="mobile-handle-title">
+                {routeResult && source && destination ? <RouteLabel from={source} to={destination} /> : 'Rota Planlayıcı'}
+              </span>
+              <span className="mobile-handle-action">
+                {isSheetOpen ? 'Haritayı Gör' : 'Rotaları Gör'}
+                <svg className={`handle-chevron ${isSheetOpen ? 'is-down' : ''}`} width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15" /></svg>
+              </span>
             </span>
-            <span className="mobile-handle-action">
-              {isBottomSheetExpanded ? 'Haritayı Gör' : 'Rotaları Gör'}
-              <svg className={`handle-chevron ${isBottomSheetExpanded ? 'is-down' : ''}`} width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15" /></svg>
-            </span>
-          </span>
-        </button>
-
+          </button>
+        }
+      >
         <div id="route-panel-content" className="sidebar-content" inert={isSheetContentHidden}>
         <header className="sidebar-header">
           <div className="brand-section">
@@ -549,7 +580,7 @@ function App() {
         </div>
 
         {/* Results Area inside Sidebar */}
-        <section className="results-container" aria-label="Rota sonuçları">
+        <section className="results-container" aria-label="Rota sonuçları" ref={resultsRef}>
           <p className="sr-only" aria-live="polite">{resultAnnouncement}</p>
           {!routeResult ? (
             <div className="results-placeholder">
@@ -682,7 +713,7 @@ function App() {
           )}
         </section>
         </div>
-      </aside>
+      </BottomSheet>
 
       {/* Map Display Panel */}
       <main className="map-panel" aria-label="Harita">
@@ -717,7 +748,7 @@ function App() {
                 url={MAP_TILES[activeTileKey].labelsUrl}
               />
             )}
-            <MapUpdater sourceCoords={sourceCoords} destCoords={destCoords} transferCoords={transferCoords} />
+            <MapUpdater sourceCoords={sourceCoords} destCoords={destCoords} transferCoords={transferCoords} bottomInset={mapBottomInset} />
 
             {sourceCoords && (
               <Marker position={sourceCoords} icon={startIcon} alt={`Kalkış: ${source}`}>

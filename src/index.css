@@ -1169,27 +1169,38 @@ body {
     right: 0;
     width: 100%;
     min-width: 100%;
-    height: auto;
-    max-height: 82vh;
-    max-height: 82dvh;
+    /* Fixed height; Motion translates it between the three snap points */
+    height: 82vh;
+    height: 82dvh;
     border-right: none;
     border-top: 1px solid var(--border-hover);
     border-radius: 20px 20px 0 0;
     z-index: 100;
     box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.5);
-    transition: transform 0.35s var(--ease-out);
-    transform: translateY(calc(100% - var(--sheet-peek)));
   }
 
-  .sidebar.mobile-expanded {
-    transform: translateY(0%);
+  .sheet-handle-area {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    flex-shrink: 0;
+    /* Vertical drags on the handle move the sheet, not the page */
+    touch-action: none;
   }
 
   .bottom-sheet-handle-bar {
     display: flex;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    cursor: grab;
+  }
+
+  .bottom-sheet-handle-bar:active {
+    cursor: grabbing;
+  }
+
+  /* Part of the sheet below the screen edge; padding keeps all content reachable */
+  .sidebar-content {
+    flex: none;
+    padding-bottom: var(--sheet-hidden, 0px);
   }
 
   .sidebar-header {
@@ -1233,9 +1244,5 @@ body {
   .swap-button:hover:not(:disabled),
   .swap-button:active:not(:disabled) {
     transform: none;
-  }
-
-  .sidebar {
-    transition-duration: 0.01s;
   }
 }
