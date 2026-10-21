@@ -20,7 +20,16 @@
     <title>Rota Kütahya</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Replaced by the app on load; read by crawlers and AI tools that do not run JavaScript.
+           Counts mirror src/data (bus_data_geo.json, stops.json): update them when the data changes. -->
+      <main class="static-intro">
+        <h1>Rota Kütahya</h1>
+        <p>Rota Kütahya, 76 mahalle, 27 otobüs hattı ve 840 durak verisiyle Kütahya mahalleleri arasında otobüsle nasıl gideceğinizi gösterir: önce iki mahalleyi doğrudan bağlayan hatları arar, yoksa tek aktarmalı rotaları günlük sefer sayısıyla listeler ve haritada çizer.</p>
+        <p>Kalkış ve varış mahallesini seçip "Rota Planla" butonuna basın. Haritada şehirdeki tüm durakları ve kapalı durakları da görebilirsiniz.</p>
+        <noscript><p>Rota aramak için tarayıcınızda JavaScript'i açın.</p></noscript>
+      </main>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

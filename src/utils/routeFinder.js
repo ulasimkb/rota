@@ -7,6 +7,14 @@ export const getLocations = () => {
     return Object.keys(busData.locations).sort();
 };
 
+export const getLineCount = () => {
+    const lines = new Set();
+    for (const loc of Object.values(busData.locations)) {
+        (loc.lines || []).forEach(line => lines.add(line));
+    }
+    return lines.size;
+};
+
 export const getLocationCoords = (mahalle) => {
     const loc = busData.locations[mahalle];
     if (loc && loc.lat && loc.lng) return [loc.lat, loc.lng];

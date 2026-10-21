@@ -435,17 +435,12 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  transition: background-color var(--duration-fast) ease, transform var(--duration-fast) ease;
+  transition: background-color var(--duration-fast) ease;
   box-shadow: 0 4px 14px var(--shadow-color);
 }
 
 .search-button:hover:not(:disabled) {
   background-color: var(--accent-primary-pressed);
-  transform: translateY(-1px);
-}
-
-.search-button:active:not(:disabled) {
-  transform: translateY(0);
 }
 
 .search-button:disabled {
@@ -582,6 +577,29 @@ body {
 
 .results-placeholder-text {
   font-size: 0.9375rem;
+  max-width: 38ch;
+  margin-inline: auto;
+}
+
+.results-placeholder-text + .results-placeholder-text {
+  margin-top: 0.5rem;
+}
+
+/* Static copy in index.html, shown until React replaces it (and to readers without JS) */
+.static-intro {
+  max-width: 40rem;
+  padding: 2rem 1.5rem;
+  color: var(--text-primary);
+}
+
+.static-intro h1 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.static-intro p {
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
 }
 
 .results-info-row {
@@ -638,7 +656,7 @@ body {
   border: 1px solid var(--border-color);
   border-radius: 16px;
   padding: 1.25rem;
-  transition: border-color var(--duration-fast) ease, box-shadow var(--duration-fast) ease, transform var(--duration-fast) ease;
+  transition: border-color var(--duration-fast) ease, box-shadow var(--duration-fast) ease;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -651,7 +669,6 @@ body {
 .route-card:hover {
   border-color: var(--border-hover);
   box-shadow: 0 4px 18px var(--shadow-color);
-  transform: translateY(-2px);
 }
 
 .route-card.direct.selected-card {
@@ -1279,11 +1296,6 @@ body {
 
   .autocomplete-dropdown {
     animation: none;
-  }
-
-  .route-card:hover,
-  .search-button:hover:not(:disabled) {
-    transform: none;
   }
 
   .swap-button:hover:not(:disabled),

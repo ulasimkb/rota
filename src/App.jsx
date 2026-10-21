@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect, useRef, useId } from 'react'
-import { getLocations, findRoutes, findClosestLocation, getLocationCoords, findNearbyStops } from './utils/routeFinder'
+import { getLocations, findRoutes, findClosestLocation, getLocationCoords, findNearbyStops, getLineCount } from './utils/routeFinder'
 import { MapContainer, TileLayer, Marker, Polyline, Popup, Tooltip, useMap, CircleMarker } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet';
@@ -340,6 +340,7 @@ function App() {
   const [activeTileKey, setActiveTileKey] = useState('voyager')
 
   const locations = useMemo(() => getLocations(), [])
+  const lineCount = useMemo(() => getLineCount(), [])
   const mapColors = useMemo(() => getMapColors(), [])
   const isMobile = useMediaQuery(MOBILE_QUERY)
   const viewportHeight = useViewportHeight()
@@ -587,7 +588,8 @@ function App() {
               <svg className="results-placeholder-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
               <div>
                 <h2 className="results-title">Güzergah Hazır Değil</h2>
-                <p className="results-placeholder-text">Başlangıç ve varış mahallelerini seçip "Rota Planla" butonuna tıklayarak aramayı başlatın.</p>
+                <p className="results-placeholder-text">Rota Kütahya, {locations.length} mahalle, {lineCount} otobüs hattı ve {stopsData.length} durak verisiyle mahalleler arasında otobüsle nasıl gideceğinizi gösterir: önce iki mahalleyi doğrudan bağlayan hatları arar, yoksa tek aktarmalı rotaları günlük sefer sayısıyla listeler ve haritada çizer.</p>
+                <p className="results-placeholder-text">Kalkış ve varış mahallesini seçip "Rota Planla" butonuna basın.</p>
               </div>
             </div>
           ) : (
